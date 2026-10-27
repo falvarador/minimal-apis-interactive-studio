@@ -1,0 +1,4179 @@
+.module {
+  min-inline-size: 0;
+  animation: enter 220ms ease-out both;
+  overflow-wrap: anywhere;
+}
+
+.module :global(code) {
+  overflow-wrap: anywhere;
+}
+
+.module :global(input),
+.module :global(select) {
+  min-inline-size: 0;
+  max-inline-size: 100%;
+}
+
+.pipelineControls select {
+  inline-size: min(100%, 28rem);
+}
+
+@keyframes enter {
+  from {
+    opacity: 0;
+    translate: 0 0.35rem;
+  }
+
+  to {
+    opacity: 1;
+    translate: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .module {
+    animation: none;
+  }
+}
+
+.requestTab {
+  padding-inline: 0.75rem;
+  padding-block: 0.375rem;
+  border: 1px solid;
+  border-radius: 0.75rem;
+  background-color: var(--surface);
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 0.75rem;
+  opacity: 0.75;
+  transition: color 180ms ease, background-color 180ms ease, border-color 180ms ease, opacity 180ms ease;
+
+  &[data-verb="GET"] {
+    border-color: color-mix(in srgb, var(--color-emerald-500) 30%, transparent);
+    color: var(--color-emerald-400);
+  }
+
+  &[data-verb="POST"] {
+    border-color: color-mix(in srgb, var(--color-amber-500) 30%, transparent);
+    color: var(--color-amber-400);
+  }
+
+  &[data-verb="PUT"] {
+    border-color: color-mix(in srgb, var(--color-blue-500) 30%, transparent);
+    color: var(--color-blue-400);
+  }
+
+  &[data-verb="DELETE"] {
+    border-color: color-mix(in srgb, var(--color-rose-500) 30%, transparent);
+    color: var(--color-rose-400);
+  }
+
+  &[data-selected="true"] {
+    border-color: var(--color-amber-400);
+    background-color: color-mix(in srgb, var(--color-amber-500) 20%, transparent);
+    color: var(--color-white);
+    opacity: 1;
+    box-shadow: 0 10px 20px -8px rgb(0 0 0 / 40%);
+  }
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.openApiInteractiveScalarOpenAPIContainerLayout {
+  --space-y: 2rem;
+}
+
+.openApiInteractiveScalarOpenAPIContainerLayout > :not([hidden]) ~ :not([hidden]) {
+  margin-block-start: var(--space-y);
+}
+
+.openApiInteractiveScalarOpenAPIContentPanel {
+  background-color: color-mix(in srgb, var(--color-slate-900) 90%, transparent);
+  border-width: 1px;
+  border-color: var(--color-slate-800);
+  padding: 1.5rem;
+  border-radius: 1rem;
+}
+
+.openApiInteractiveScalarOpenAPIRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: center;
+  justify-content: space-between;
+  margin-block-end: 1.5rem;
+}
+
+.openApiInteractiveScalarOpenAPISectionHeading {
+  display: flex;
+  font-weight: 700;
+  gap: 0.5rem;
+  align-items: center;
+  font-size: 1.125rem;
+  color: var(--color-white);
+  color: var(--color-white);
+}
+
+.openApiElement {
+  block-size: 1.25rem;
+  color: var(--color-cyan-400);
+  inline-size: 1.25rem;
+}
+
+.openApiScalarV1CodeText {
+  color: var(--color-cyan-300);
+}
+
+.openApiASPNETCoreDescription {
+  margin-block-start: 0.25rem;
+  color: var(--color-slate-400);
+  font-size: 0.75rem;
+}
+
+.openApiWithTagsWithSummaryProducesValidationProblemRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.openApiWithTagsWithSummaryProducesValidationProblemFieldLabel {
+  background-color: var(--color-slate-950);
+  border-width: 1px;
+  border-color: var(--color-slate-700);
+  cursor: pointer;
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  padding-inline: 0.75rem;
+  padding-block: 0.5rem;
+  border-radius: 0.75rem;
+  font-size: 0.75rem;
+}
+
+.openApiTextField {
+  accent-color: var(--color-cyan-400);
+}
+
+.openApiWithTagsWithSummaryProducesValidationProblemInlineText {
+  font-weight: 500;
+  color: var(--color-slate-200);
+}
+
+.openApiTextFieldAccent {
+  accent-color: var(--color-purple-400);
+}
+
+.openApiHttpsLocalhost7290ContentPanel {
+  background-color: var(--color-slate-950);
+  border-width: 1px;
+  border-color: var(--color-slate-700);
+  overflow: hidden;
+  border-radius: 1rem;
+  box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.5);
+}
+
+.openApiHttpsLocalhost7290Row {
+  background-color: var(--color-slate-900);
+  border-block-end-width: 1px;
+  border-color: var(--color-slate-800);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-inline: 1rem;
+  padding-block: 0.625rem;
+}
+
+.openApiHttpsLocalhost7290RowVariant2 {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.openApiIcon {
+  background-color: color-mix(in srgb, var(--color-rose-500) 80%, transparent);
+  block-size: 0.75rem;
+  border-radius: 9999px;
+  inline-size: 0.75rem;
+}
+
+.openApiIconWarning {
+  background-color: color-mix(in srgb, var(--color-amber-500) 80%, transparent);
+  block-size: 0.75rem;
+  border-radius: 9999px;
+  inline-size: 0.75rem;
+}
+
+.openApiIconSuccess {
+  background-color: color-mix(in srgb, var(--color-emerald-500) 80%, transparent);
+  block-size: 0.75rem;
+  border-radius: 9999px;
+  inline-size: 0.75rem;
+}
+
+.openApiHttpsLocalhost7290Badge {
+  background-color: var(--color-slate-950);
+  border-width: 1px;
+  border-color: var(--color-slate-800);
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  margin-inline-start: 0.75rem;
+  padding-inline: 0.75rem;
+  padding-block: 0.125rem;
+  border-radius: 0.375rem;
+  color: var(--color-cyan-300);
+  font-size: 0.75rem;
+}
+
+.openApiSourceOpenapiV1InlineText {
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  color: var(--color-slate-400);
+  font-size: 0.75rem;
+}
+
+.openApiOASGrid {
+  display: grid;
+  grid-template-columns: repeat(1,minmax(0,1fr));
+}
+
+@media (min-width: 1024px) {
+
+  .openApiOASGrid {
+    grid-template-columns: repeat(12,minmax(0,1fr));
+  }
+
+  .openApiOASContainerLayout {
+    grid-column: span 4 / span 4;
+    grid-column: span 4 / span 4;
+  }
+
+  .openApiContainerLayoutVariant3 {
+    grid-column: span 8 / span 8;
+    grid-column: span 8 / span 8;
+  }
+
+  .foundationsArchitecturalPatternExplorerStack {
+    grid-column: span 6 / span 6;
+  }
+
+  .foundationsVisualStudio2026ContentPanel {
+    grid-column: span 6 / span 6;
+  }
+
+  .routingRouteConstraintsAmbiguousContentPanel {
+    grid-column: span 6 / span 6;
+  }
+
+  .routingWhyShouldnExposeStack {
+    grid-column: span 6 / span 6;
+  }
+
+  .responsesPipelineEnvironmentControlsContainerLayout {
+    grid-column: span 5 / span 5;
+  }
+
+  .responsesHTTPResponseInspectorContainerLayout {
+    grid-column: span 7 / span 7;
+  }
+
+  .crudBaseUrlHttpsLocalhostContainerLayout {
+    grid-column: span 7 / span 7;
+  }
+
+  .crudResponseOutputHowStack {
+    grid-column: span 5 / span 5;
+  }
+
+  .securityConfigureTestJWTContainerLayout {
+    grid-column: span 6 / span 6;
+  }
+
+  .securitySelectEndpointCallStack {
+    grid-column: span 6 / span 6;
+  }
+}
+
+.openApiOASContainerLayout {
+  background-color: color-mix(in srgb, var(--color-slate-950) 60%, transparent);
+  border-inline-end-width: 1px;
+  border-color: var(--color-slate-800);
+  padding: 1.25rem;
+  --space-y: 1.25rem;
+}
+
+.openApiOASContainerLayout > :not([hidden]) ~ :not([hidden]) {
+  margin-block-start: var(--space-y);
+}
+
+.openApiOASRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.openApiSectionHeading {
+  font-weight: 700;
+  font-size: 1rem;
+  color: var(--color-white);
+  color: var(--color-white);
+}
+
+.openApiOASBadge {
+  background-color: color-mix(in srgb, var(--color-cyan-500) 20%, transparent);
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  padding-inline: 0.5rem;
+  padding-block: 0.125rem;
+  border-radius: 0.375rem;
+  font-size: 10px;
+  color: var(--color-cyan-300);
+}
+
+.openApiAuthenticationBearerJWTContentPanel {
+  border-width: 1px;
+  border-color: color-mix(in srgb, var(--color-purple-500) 40%, transparent);
+  padding: 0.75rem;
+  border-radius: 0.75rem;
+  --space-y: 0.5rem;
+  background-color: rgb(59 7 100 / 30%);
+}
+
+.openApiAuthenticationBearerJWTContentPanel > :not([hidden]) ~ :not([hidden]) {
+  margin-block-start: var(--space-y);
+}
+
+.openApiAuthenticationBearerJWTRow {
+  display: flex;
+  font-weight: 700;
+  gap: 0.375rem;
+  align-items: center;
+  color: var(--color-purple-300);
+  font-size: 0.75rem;
+}
+
+.openApiElementVariant2 {
+  block-size: 0.875rem;
+  inline-size: 0.875rem;
+}
+
+.openApiSimulatedAuthenticationSchemeTextField {
+  background-color: var(--color-slate-900);
+  border-width: 1px;
+  border-color: var(--color-slate-700);
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  padding-inline: 0.5rem;
+  padding-block: 0.25rem;
+  border-radius: 0.375rem;
+  font-size: 11px;
+  color: var(--color-slate-300);
+  inline-size: 100%;
+}
+
+.openApiContainerLayout {
+  font-weight: 700;
+  margin-block-end: 0.5rem;
+  color: var(--color-slate-400);
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.openApiContainerLayoutVariant2 {
+  --space-y: 0.375rem;
+}
+
+.openApiContainerLayoutVariant2 > :not([hidden]) ~ :not([hidden]) {
+  margin-block-start: var(--space-y);
+}
+
+.openApiButtonConditional {
+  background-color: color-mix(in srgb, var(--color-cyan-500) 20%, transparent);
+  border-width: 1px;
+  border-color: color-mix(in srgb, var(--color-cyan-500) 40%, transparent);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.625rem;
+  border-radius: 0.75rem;
+  text-align: start;
+  transition: all 180ms ease;
+  inline-size: 100%;
+  color: var(--color-white);
+  color: var(--color-white);
+}
+
+.openApiButtonConditionalNeutral {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.625rem;
+  border-radius: 0.75rem;
+  text-align: start;
+  color: var(--color-slate-400);
+  transition: all 180ms ease;
+  inline-size: 100%;
+}
+
+.openApiButtonConditionalNeutral:hover {
+  background-color: var(--color-slate-900);
+}
+
+.openApiInlineText {
+  font-weight: 500;
+  font-size: 0.75rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.openApiBadgeConditional {
+  background-color: color-mix(in srgb, var(--color-amber-500) 20%, transparent);
+  font-weight: 700;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  padding-inline: 0.375rem;
+  padding-block: 0.125rem;
+  border-radius: 0.375rem;
+  font-size: 10px;
+  color: var(--color-amber-300);
+}
+
+.openApiBadgeConditionalSuccess {
+  background-color: color-mix(in srgb, var(--color-emerald-500) 20%, transparent);
+  font-weight: 700;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  padding-inline: 0.375rem;
+  padding-block: 0.125rem;
+  border-radius: 0.375rem;
+  font-size: 10px;
+  color: var(--color-emerald-300);
+}
+
+.openApiContainerLayoutVariant3 {
+  padding: 1.5rem;
+  --space-y: 1rem;
+}
+
+.openApiContainerLayoutVariant3 > :not([hidden]) ~ :not([hidden]) {
+  margin-block-start: var(--space-y);
+}
+
+.openApiPOSTDishesDocumentedContainerLayout {
+  --space-y: 1rem;
+}
+
+.openApiPOSTDishesDocumentedContainerLayout > :not([hidden]) ~ :not([hidden]) {
+  margin-block-start: var(--space-y);
+}
+
+.openApiPOSTBadge {
+  background-color: color-mix(in srgb, var(--color-amber-500) 20%, transparent);
+  font-weight: 700;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  padding-inline: 0.625rem;
+  padding-block: 0.25rem;
+  border-radius: 0.375rem;
+  color: var(--color-amber-300);
+  font-size: 0.75rem;
+}
+
+.openApiDishesInlineText {
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 0.875rem;
+  color: var(--color-white);
+  color: var(--color-white);
+}
+
+.openApiSectionHeadingVariant2 {
+  font-weight: 700;
+  font-size: 1.125rem;
+  color: var(--color-white);
+  color: var(--color-white);
+}
+
+.openApiCreatesNewDishDescription {
+  color: var(--color-slate-300);
+  font-size: 0.75rem;
+}
+
+.openApiDocumentedResponsesInferredContainerLayout {
+  padding-block-start: 0.5rem;
+  --space-y: 0.5rem;
+}
+
+.openApiDocumentedResponsesInferredContainerLayout > :not([hidden]) ~ :not([hidden]) {
+  margin-block-start: var(--space-y);
+}
+
+.openApiDocumentedResponsesInferredContainerLayoutNeutral {
+  font-weight: 700;
+  color: var(--color-slate-400);
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.openApi201CreatedApplicationRow {
+  background-color: var(--color-slate-900);
+  border-width: 1px;
+  border-color: color-mix(in srgb, var(--color-emerald-500) 30%, transparent);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem;
+  border-radius: 0.75rem;
+  font-size: 0.75rem;
+}
+
+.openApi201CreatedInlineText {
+  font-weight: 700;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  color: var(--color-emerald-400);
+}
+
+.openApiApplicationJsonSchemaInlineText {
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  color: var(--color-slate-300);
+}
+
+.openApi400BadRequestRow {
+  background-color: var(--color-slate-900);
+  border-width: 1px;
+  border-color: color-mix(in srgb, var(--color-rose-500) 40%, transparent);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem;
+  border-radius: 0.75rem;
+  font-size: 0.75rem;
+}
+
+.openApi400BadRequestInlineText {
+  font-weight: 700;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  color: var(--color-rose-400);
+}
+
+.openApiMissing400BadContentPanel {
+  border-width: 1px;
+  border-color: color-mix(in srgb, var(--color-amber-500) 30%, transparent);
+  padding: 0.75rem;
+  border-radius: 0.75rem;
+  color: var(--color-amber-200);
+  font-size: 0.75rem;
+  background-color: rgb(69 26 3 / 30%);
+}
+
+.openApiProducesValidationProblemCodeText {
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+
+.openApiGETBadge {
+  background-color: color-mix(in srgb, var(--color-emerald-500) 20%, transparent);
+  font-weight: 700;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  padding-inline: 0.625rem;
+  padding-block: 0.25rem;
+  border-radius: 0.375rem;
+  color: var(--color-emerald-300);
+  font-size: 0.75rem;
+}
+
+.openApi200OKSchemaContentPanel {
+  background-color: var(--color-slate-900);
+  border-width: 1px;
+  border-color: color-mix(in srgb, var(--color-emerald-500) 30%, transparent);
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  padding: 0.75rem;
+  border-radius: 0.75rem;
+  color: var(--color-emerald-300);
+  font-size: 0.75rem;
+}
+
+.openApi404NotFoundContentPanel {
+  background-color: var(--color-slate-900);
+  border-width: 1px;
+  border-color: color-mix(in srgb, var(--color-amber-500) 30%, transparent);
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  padding: 0.75rem;
+  border-radius: 0.75rem;
+  color: var(--color-amber-300);
+  font-size: 0.75rem;
+}
+
+.openApiCourseWrapUpSectionHeading {
+  display: flex;
+  font-weight: 700;
+  gap: 0.5rem;
+  align-items: center;
+  margin-block-end: 0.5rem;
+  font-size: 1.125rem;
+  color: var(--color-white);
+  color: var(--color-white);
+}
+
+.openApiElementAccent {
+  block-size: 1.25rem;
+  color: var(--color-violet-400);
+  inline-size: 1.25rem;
+}
+
+.openApiBothApproachesShareDescription {
+  margin-block-end: 1.25rem;
+  color: var(--color-slate-400);
+  font-size: 0.75rem;
+}
+
+.openApiCapabilityFeatureASPContainerLayout {
+  overflow-x: auto;
+}
+
+.openApiCapabilityFeatureASPDataTable {
+  border-collapse: collapse;
+  text-align: start;
+  font-size: 0.75rem;
+  inline-size: 100%;
+}
+
+@media (min-width: 640px) {
+
+  .openApiCapabilityFeatureASPDataTable {
+    font-size: 0.875rem;
+  }
+}
+
+.openApiCapabilityFeatureASPTableRow {
+  border-block-end-width: 1px;
+  border-color: var(--color-slate-800);
+  color: var(--color-slate-400);
+}
+
+.openApiCapabilityFeatureColumnHeading {
+  padding-inline: 1rem;
+  padding-block: 0.75rem;
+}
+
+.openApiASPNETCoreColumnHeading {
+  padding-inline: 1rem;
+  padding-block: 0.75rem;
+  color: var(--color-violet-300);
+}
+
+.openApiASPNETCoreColumnHeadingVariant2 {
+  padding-inline: 1rem;
+  padding-block: 0.75rem;
+  color: var(--color-indigo-300);
+}
+
+.openApiRoutingConstraintsFirstTableBody  > :not(:first-child) {
+  border-block-start: 1px solid rgb(30 41 59 / 70%);
+}
+
+.openApiRoutingConstraintsFirstTableBody {
+  border-block-start-width: 1px;
+  color: var(--color-slate-200);
+}
+
+.openApiRoutingConstraintsFirstTableBody > :not([hidden]) ~ :not([hidden]) {
+  border-top: 1px solid rgb(30 41 59 / .7);
+}
+
+.openApiRoutingConstraintsTableCell {
+  font-weight: 600;
+  padding-inline: 1rem;
+  padding-block: 0.75rem;
+}
+
+.openApiFirstClassMapGetTableCell {
+  padding-inline: 1rem;
+  padding-block: 0.75rem;
+  color: var(--color-emerald-300);
+}
+
+.openApiJSONFirstIgnoresTableCell {
+  padding-inline: 1rem;
+  padding-block: 0.75rem;
+  color: var(--color-amber-300);
+}
+
+.foundationsInstructorKevinDockxContainerLayout {
+  --space-y: 2rem;
+}
+
+.foundationsInstructorKevinDockxContainerLayout > :not([hidden]) ~ :not([hidden]) {
+  margin-block-start: var(--space-y);
+}
+
+.foundationsInstructorKevinDockxContentPanel {
+  padding: 1.5rem;
+  border-radius: 1rem;
+  background-image: linear-gradient(to bottom right,var(--g-from,transparent),var(--g-to,transparent));
+  --g-from: var(--color-violet-900);
+  --g-via: var(--color-slate-900);
+  --g-to: color-mix(in srgb, var(--color-indigo-950) 40%, transparent);
+  border-width: 1px;
+  border-color: color-mix(in srgb, var(--color-violet-500) 30%, transparent);
+  box-shadow: 0 10px 20px -8px rgb(0 0 0 / 0.4);
+}
+
+.foundationsInstructorKevinDockxRow {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.foundationsInstructorKevinDockxBadge {
+  padding-inline: 0.75rem;
+  padding-block: 0.25rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  background-color: color-mix(in srgb, var(--color-violet-500) 20%, transparent);
+  color: var(--color-violet-300);
+  border-width: 1px;
+  border-color: color-mix(in srgb, var(--color-violet-500) 30%, transparent);
+}
+
+.foundationsGettingStartedASPSectionHeading {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-block-start: 0.75rem;
+  color: var(--color-white);
+}
+
+@media (min-width: 640px) {
+
+  .foundationsGettingStartedASPSectionHeading {
+    font-size: 1.875rem;
+  }
+
+  .foundationsMinimalAPIsProvideDescription {
+    font-size: 1rem;
+  }
+
+  .routingInMinimalAPIsDescription {
+    font-size: 0.875rem;
+  }
+
+  .routingGrid {
+    grid-template-columns: repeat(2,minmax(0,1fr));
+  }
+
+  .securityAudienceMenuApiGrid {
+    grid-template-columns: repeat(3,minmax(0,1fr));
+  }
+}
+
+.foundationsMinimalAPIsProvideDescription {
+  color: var(--color-slate-300);
+  margin-block-start: 0.5rem;
+  max-inline-size: 48rem;
+  font-size: 0.875rem;
+  line-height: 1.625;
+}
+
+.foundationsDishesAPICodeText {
+  color: var(--color-violet-300);
+}
+
+.foundationsArchitecturalPatternExplorerGrid {
+  display: grid;
+  grid-template-columns: repeat(1,minmax(0,1fr));
+  gap: 1.5rem;
+}
+
+@media (min-width: 1024px) {
+
+  .foundationsArchitecturalPatternExplorerGrid {
+    grid-template-columns: repeat(12,minmax(0,1fr));
+  }
+
+  .routingRouteConstraintsAmbiguousGrid {
+    grid-template-columns: repeat(12,minmax(0,1fr));
+  }
+
+  .routingGrid {
+    grid-template-columns: repeat(6,minmax(0,1fr));
+  }
+
+  .responsesPipelineEnvironmentControlsGrid {
+    grid-template-columns: repeat(12,minmax(0,1fr));
+  }
+
+  .crudBaseUrlHttpsLocalhostGrid {
+    grid-template-columns: repeat(12,minmax(0,1fr));
+  }
+
+  .architectureWhyUseBothGrid {
+    grid-template-columns: repeat(2,minmax(0,1fr));
+  }
+
+  .architectureGrid {
+    grid-template-columns: repeat(2,minmax(0,1fr));
+  }
+
+  .architectureInfoDishesAPIModelsGrid {
+    grid-template-columns: repeat(2,minmax(0,1fr));
+  }
+
+  .architectureInfoDishesAPIModelsGrid {
+    grid-template-columns: repeat(2,minmax(0,1fr));
+  }
+
+  .securityConfigureTestJWTGrid {
+    grid-template-columns: repeat(12,minmax(0,1fr));
+  }
+}
+
+.foundationsArchitecturalPatternExplorerStack {
+  background-color: color-mix(in srgb, var(--color-slate-900) 90%, transparent);
+  border-width: 1px;
+  border-color: var(--color-slate-800);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.foundationsArchitecturalPatternExplorerRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-block-end: 1rem;
+}
+
+.foundationsArchitecturalPatternExplorerSectionHeading {
+  font-size: 1.125rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--color-white);
+}
+
+.foundationsElement {
+  inline-size: 1.25rem;
+  block-size: 1.25rem;
+  color: var(--color-violet-400);
+}
+
+.foundationsMinimalAPIASPRow {
+  display: flex;
+  background-color: var(--color-slate-950);
+  padding: 0.25rem;
+  border-radius: 0.75rem;
+  border-width: 1px;
+  border-color: var(--color-slate-800);
+}
+
+.foundationsMinimalAPIButtonConditional {
+  padding-inline: 0.75rem;
+  padding-block: 0.375rem;
+  border-radius: 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  transition: all 180ms ease;
+  background-color: var(--color-violet-600);
+  box-shadow: 0 10px 20px -8px rgb(0 0 0 / 0.4);
+  color: var(--color-white);
+}
+
+.foundationsMinimalAPIButtonConditionalNeutral {
+  padding-inline: 0.75rem;
+  padding-block: 0.375rem;
+  border-radius: 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  transition: all 180ms ease;
+  color: var(--color-slate-400);
+}
+
+.foundationsASPNETCoreButtonConditional {
+  padding-inline: 0.75rem;
+  padding-block: 0.375rem;
+  border-radius: 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  transition: all 180ms ease;
+  background-color: var(--color-indigo-600);
+  box-shadow: 0 10px 20px -8px rgb(0 0 0 / 0.4);
+  color: var(--color-white);
+}
+
+.foundationsMinimalAPIButtonConditionalNeutral {
+  padding-inline: 0.75rem;
+  padding-block: 0.375rem;
+  border-radius: 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  transition: all 180ms ease;
+  color: var(--color-slate-400);
+}
+
+.foundationsDirectRouteHandlerContainerLayout {
+  --space-y: 1rem;
+}
+
+.foundationsDirectRouteHandlerContainerLayout > :not([hidden]) ~ :not([hidden]) {
+  margin-block-start: var(--space-y);
+}
+
+.foundationsDirectRouteHandlerContentPanel {
+  padding: 1rem;
+  border-radius: 0.75rem;
+  background-color: color-mix(in srgb, var(--color-violet-950) 30%, transparent);
+  border-width: 1px;
+  border-color: color-mix(in srgb, var(--color-violet-500) 30%, transparent);
+}
+
+.foundationsDirectRouteHandlerContainerLayoutAccent {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-violet-300);
+  margin-block-end: 0.5rem;
+}
+
+.foundationsHTTPRequestGETRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  text-align: center;
+  padding-block: 0.75rem;
+}
+
+.foundationsHTTPRequestGETRowNeutral {
+  flex: 1 1 0%;
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  background-color: var(--color-slate-900);
+  border-width: 1px;
+  border-color: var(--color-slate-700);
+}
+
+.foundationsHTTPRequestContainerLayout {
+  font-size: 0.75rem;
+  color: var(--color-slate-400);
+}
+
+.foundationsGETDishesContainerLayout {
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 0.75rem;
+  color: var(--color-emerald-400);
+  margin-block-start: 0.25rem;
+}
+
+.foundationsElementAccent {
+  inline-size: 1.25rem;
+  block-size: 1.25rem;
+  color: var(--color-violet-400);
+  flex-shrink: 0;
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.foundationsRouteHandlerLambdaRow {
+  flex: 1 1 0%;
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  background-color: color-mix(in srgb, var(--color-violet-600) 20%, transparent);
+  border-width: 1px;
+  border-color: var(--color-violet-500);
+}
+
+.foundationsRouteHandlerContainerLayout {
+  font-size: 0.75rem;
+  color: var(--color-violet-200);
+}
+
+.foundationsLambdaStaticMethodContainerLayout {
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 0.75rem;
+  margin-block-start: 0.25rem;
+  color: var(--color-white);
+}
+
+.foundationsElementAccent {
+  inline-size: 1.25rem;
+  block-size: 1.25rem;
+  color: var(--color-violet-400);
+  flex-shrink: 0;
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.foundationsHTTPRequestGETRowNeutral {
+  flex: 1 1 0%;
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  background-color: var(--color-slate-900);
+  border-width: 1px;
+  border-color: var(--color-slate-700);
+}
+
+.foundationsHTTPRequestContainerLayout {
+  font-size: 0.75rem;
+  color: var(--color-slate-400);
+}
+
+.foundationsTypedResultsOkContainerLayout {
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 0.75rem;
+  color: var(--color-cyan-400);
+  margin-block-start: 0.25rem;
+}
+
+.foundationsZeroCeremonyMapsList {
+  --space-y: 0.5rem;
+  font-size: 0.875rem;
+  color: var(--color-slate-300);
+}
+
+.foundationsZeroCeremonyMapsList > :not([hidden]) ~ :not([hidden]) {
+  margin-block-start: var(--space-y);
+}
+
+.foundationsZeroCeremonyMapsListItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+
+.foundationsElementSuccess {
+  inline-size: 1rem;
+  block-size: 1rem;
+  color: var(--color-emerald-400);
+  flex-shrink: 0;
+  margin-block-start: 0.25rem;
+}
+
+.foundationsZeroCeremonyMapsListItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+
+.foundationsElementSuccess {
+  inline-size: 1rem;
+  block-size: 1rem;
+  color: var(--color-emerald-400);
+  flex-shrink: 0;
+  margin-block-start: 0.25rem;
+}
+
+.foundationsZeroCeremonyMapsListItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+
+.foundationsElementWarning {
+  inline-size: 1rem;
+  block-size: 1rem;
+  color: var(--color-amber-400);
+  flex-shrink: 0;
+  margin-block-start: 0.25rem;
+}
+
+.foundationsDirectRouteHandlerContainerLayout {
+  --space-y: 1rem;
+}
+
+.foundationsDirectRouteHandlerContainerLayout > :not([hidden]) ~ :not([hidden]) {
+  margin-block-start: var(--space-y);
+}
+
+.foundationsModelViewControllerContentPanel {
+  padding: 1rem;
+  border-radius: 0.75rem;
+  background-color: color-mix(in srgb, var(--color-indigo-950) 30%, transparent);
+  border-width: 1px;
+  border-color: color-mix(in srgb, var(--color-indigo-500) 30%, transparent);
+}
+
+.foundationsModelViewControllerContainerLayout {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-indigo-300);
+  margin-block-end: 0.5rem;
+}
+
+.foundationsControllerAcceptsInputGrid {
+  display: grid;
+  grid-template-columns: repeat(3,minmax(0,1fr));
+  gap: 0.5rem;
+  text-align: center;
+  padding-block: 0.75rem;
+}
+
+.foundationsControllerAcceptsInputContentPanel {
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  background-color: var(--color-slate-900);
+  border-width: 1px;
+  border-color: color-mix(in srgb, var(--color-indigo-500) 40%, transparent);
+}
+
+.foundationsControllerContainerLayout {
+  font-weight: 700;
+  color: var(--color-indigo-300);
+  font-size: 0.75rem;
+}
+
+.foundationsAcceptsInputOrchestratesContainerLayout {
+  font-size: 11px;
+  color: var(--color-slate-400);
+  margin-block-start: 0.25rem;
+}
+
+.foundationsControllerAcceptsInputContentPanel {
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  background-color: var(--color-slate-900);
+  border-width: 1px;
+}
+
+.foundationsControllerContainerLayout {
+  font-weight: 700;
+  color: var(--color-indigo-300);
+  font-size: 0.75rem;
+}
+
+.foundationsAcceptsInputOrchestratesContainerLayout {
+  font-size: 11px;
+  color: var(--color-slate-400);
+  margin-block-start: 0.25rem;
+}
+
+.foundationsControllerAcceptsInputContentPanel {
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  background-color: var(--color-slate-900);
+  border-width: 1px;
+}
+
+.foundationsControllerContainerLayout {
+  font-weight: 700;
+  color: var(--color-indigo-300);
+  font-size: 0.75rem;
+}
+
+.foundationsAcceptsInputOrchestratesContainerLayout {
+  font-size: 11px;
+  color: var(--color-slate-400);
+  margin-block-start: 0.25rem;
+}
+
+.foundationsZeroCeremonyMapsList {
+  --space-y: 0.5rem;
+  font-size: 0.875rem;
+  color: var(--color-slate-300);
+}
+
+.foundationsZeroCeremonyMapsList > :not([hidden]) ~ :not([hidden]) {
+  margin-block-start: var(--space-y);
+}
+
+.foundationsZeroCeremonyMapsListItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+
+.foundationsElementVariant2 {
+  inline-size: 1rem;
+  block-size: 1rem;
+  color: var(--color-indigo-400);
+  flex-shrink: 0;
+  margin-block-start: 0.25rem;
+}
+
+.foundationsZeroCeremonyMapsListItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+
+.foundationsElementVariant2 {
+  inline-size: 1rem;
+  block-size: 1rem;
+  color: var(--color-indigo-400);
+  flex-shrink: 0;
+  margin-block-start: 0.25rem;
+}
+
+.foundationsZeroCeremonyMapsListItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+
+.foundationsElementVariant2 {
+  inline-size: 1rem;
+  block-size: 1rem;
+  color: var(--color-indigo-400);
+  flex-shrink: 0;
+  margin-block-start: 0.25rem;
+}
+
+.foundationsEFCoreSQLiteRow {
+  margin-block-start: 1rem;
+  padding-block-start: 1rem;
+  border-block-start-width: 1px;
+  border-color: var(--color-slate-800);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.75rem;
+  color: var(--color-slate-400);
+}
+
+.foundationsDishesDbCodeText {
+  color: var(--color-emerald-400);
+}
+
+.foundationsDishesAPICodeText {
+  color: var(--color-violet-300);
+}
+
+.foundationsDishesAPICodeText {
+  color: var(--color-violet-300);
+}
+
+.foundationsVisualStudio2026ContentPanel {
+  background-color: color-mix(in srgb, var(--color-slate-900) 90%, transparent);
+  border-width: 1px;
+  border-color: var(--color-slate-800);
+  border-radius: 1rem;
+  padding: 1.5rem;
+}
+
+.foundationsArchitecturalPatternExplorerRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-block-end: 1rem;
+}
+
+.foundationsArchitecturalPatternExplorerSectionHeading {
+  font-size: 1.125rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.foundationsElementInfo {
+  inline-size: 1.25rem;
+  block-size: 1.25rem;
+  color: var(--color-cyan-400);
+}
+
+.foundationsDishesAPICsprojBadge {
+  font-size: 0.75rem;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  padding-inline: 0.625rem;
+  padding-block: 0.25rem;
+  border-radius: 0.375rem;
+  background-color: color-mix(in srgb, var(--color-cyan-500) 10%, transparent);
+  color: var(--color-cyan-300);
+  border-width: 1px;
+  border-color: color-mix(in srgb, var(--color-cyan-500) 30%, transparent);
+}
+
+.foundationsToggleProjectTemplateDescription {
+  font-size: 0.75rem;
+  color: var(--color-slate-400);
+  margin-block-end: 1rem;
+}
+
+.foundationsUseControllersUncheckContentPanel {
+  --space-y: 0.75rem;
+  background-color: var(--color-slate-950);
+  padding: 1rem;
+  border-radius: 0.75rem;
+  border-width: 1px;
+  border-color: var(--color-slate-800);
+}
+
+.foundationsUseControllersUncheckContentPanel > :not([hidden]) ~ :not([hidden]) {
+  margin-block-start: var(--space-y);
+}
+
+.foundationsUseControllersUncheckFieldLabel {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  transition: all 180ms ease;
+}
+
+.foundationsUseControllersUncheckFieldLabel:hover {
+  background-color: var(--color-slate-900);
+}
+
+.foundationsUseControllersContainerLayout {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--color-white);
+}
+
+.foundationsHTTPRequestContainerLayout {
+  font-size: 0.75rem;
+  color: var(--color-slate-400);
+}
+
+.foundationsTextField {
+  inline-size: 1.25rem;
+  block-size: 1.25rem;
+  accent-color: var(--color-violet-500);
+  border-radius: 0.375rem;
+  cursor: pointer;
+}
+
+.foundationsUseControllersUncheckFieldLabel {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  transition: all 180ms ease;
+}
+
+.foundationsUseControllersUncheckFieldLabel:hover {
+  background-color: var(--color-slate-900);
+}
+
+.foundationsUseControllersContainerLayout {
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.foundationsHTTPRequestContainerLayout {
+  font-size: 0.75rem;
+  color: var(--color-slate-400);
+}
+
+.foundationsTextField {
+  inline-size: 1.25rem;
+  block-size: 1.25rem;
+  accent-color: var(--color-violet-500);
+  border-radius: 0.375rem;
+  cursor: pointer;
+}
+
+.foundationsAuthenticationTypeStartRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem;
+}
+
+.foundationsUseControllersContainerLayout {
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.foundationsHTTPRequestContainerLayout {
+  font-size: 0.75rem;
+  color: var(--color-slate-400);
+}
+
+.foundationsAuthenticationTypeSelect {
+  background-color: var(--color-slate-900);
+  border-width: 1px;
+  border-color: var(--color-slate-700);
+  color: var(--color-slate-200);
+  font-size: 0.75rem;
+  border-radius: 0.5rem;
+  padding-inline: 0.75rem;
+  padding-block: 0.375rem;
+}
+
+.foundationsInteractiveHTTPRequestContentPanel {
+  background-color: color-mix(in srgb, var(--color-slate-900) 90%, transparent);
+  border-width: 1px;
+  border-color: var(--color-slate-800);
+  border-radius: 1rem;
+  padding: 1.5rem;
+}
+
+.foundationsInteractiveHTTPRequestRow {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-block-end: 1.5rem;
+}
+
+.foundationsArchitecturalPatternExplorerSectionHeading {
+  font-size: 1.125rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.foundationsElementSuccessVariant2 {
+  inline-size: 1.25rem;
+  block-size: 1.25rem;
+  color: var(--color-emerald-400);
+}
+
+.foundationsWatchHowAnDescription {
+  font-size: 0.75rem;
+  color: var(--color-slate-400);
+  margin-block-start: 0.25rem;
+}
+
+.foundationsGETHttpLocalhostRow {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.foundationsPipelineRequestURLSelect {
+  background-color: var(--color-slate-950);
+  border-width: 1px;
+  border-color: var(--color-slate-700);
+  border-radius: 0.75rem;
+  padding-inline: 0.75rem;
+  padding-block: 0.5rem;
+  font-size: 0.75rem;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  color: var(--color-slate-200);
+}
+
+.foundationsButton {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding-inline: 1rem;
+  padding-block: 0.5rem;
+  border-radius: 0.75rem;
+  background-image: linear-gradient(to right,var(--g-from,transparent),var(--g-to,transparent));
+  --g-from: var(--color-emerald-500);
+  --g-to: var(--color-teal-600);
+  font-weight: 600;
+  font-size: 0.75rem;
+  box-shadow: 0 10px 20px -8px rgb(0 0 0 / 0.4);
+  transition: all 180ms ease;
+  color: var(--color-white);
+}
+
+.foundationsButton:hover {
+  opacity: 0.95;
+}
+
+.foundationsButton:disabled {
+  opacity: 0.5;
+}
+
+.foundationsElementVariant3 {
+  inline-size: 1rem;
+  block-size: 1rem;
+  fill: currentColor;
+}
+
+.foundationsGrid {
+  display: grid;
+  grid-template-columns: repeat(1,minmax(0,1fr));
+  gap: 0.75rem;
+}
+
+@media (min-width: 768px) {
+
+  .foundationsGrid {
+    grid-template-columns: repeat(5,minmax(0,1fr));
+  }
+
+  .routingAddTransientEveryRequestGrid {
+    grid-template-columns: repeat(3,minmax(0,1fr));
+  }
+
+  .crudDishesEndpointsAppMapGroupGrid {
+    grid-template-columns: repeat(3,minmax(0,1fr));
+  }
+}
+
+.foundationsContentPanelConditional {
+  padding: 1rem;
+  border-radius: 0.75rem;
+  border-width: 1px;
+  transition: all 180ms ease;
+  transition-duration: 300ms;
+  background-color: color-mix(in srgb, var(--color-emerald-500) 20%, transparent);
+  border-color: var(--color-emerald-400);
+  box-shadow: 0 10px 20px -8px rgb(0 0 0 / 0.4);
+  box-shadow: 0 10px 15px -3px rgb(16 185 129 / 0.1), 0 4px 6px -4px rgb(16 185 129 / 0.1);
+  transform: scale(1.03);
+}
+
+.foundationsContentPanelConditionalSuccess {
+  padding: 1rem;
+  border-radius: 0.75rem;
+  border-width: 1px;
+  transition: all 180ms ease;
+  transition-duration: 300ms;
+  background-color: color-mix(in srgb, var(--color-slate-800) 80%, transparent);
+  border-color: color-mix(in srgb, var(--color-emerald-500) 40%, transparent);
+}
+
+.foundationsContentPanelConditionalNeutral {
+  padding: 1rem;
+  border-radius: 0.75rem;
+  border-width: 1px;
+  transition: all 180ms ease;
+  transition-duration: 300ms;
+  background-color: var(--color-slate-950);
+  border-color: var(--color-slate-800);
+  opacity: 0.75;
+}
+
+.foundationsRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 11px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  margin-block-end: 0.5rem;
+}
+
+.foundationsInlineTextConditional {
+  color: var(--color-emerald-300);
+  font-weight: 700;
+}
+
+.foundationsInlineTextConditionalNeutral {
+  color: var(--color-slate-400);
+}
+
+.foundationsElementSuccessVariant3 {
+  inline-size: 1rem;
+  block-size: 1rem;
+  color: var(--color-emerald-400);
+}
+
+.foundationsContainerLayout {
+  font-weight: 700;
+  font-size: 0.875rem;
+  margin-block-end: 0.25rem;
+  color: var(--color-white);
+}
+
+.foundationsContainerLayoutNeutral {
+  font-size: 0.75rem;
+  color: var(--color-slate-300);
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  overflow-wrap: anywhere;
+}
+
+.routingDependencyInjectionIoCContainerLayout {
+  --space-y: 2rem;
+}
+
+.routingDependencyInjectionIoCContainerLayout > :not([hidden]) ~ :not([hidden]) {
+  margin-block-start: var(--space-y);
+}
+
+.routingDependencyInjectionIoCContentPanel {
+  background-color: color-mix(in srgb, var(--color-slate-900) 90%, transparent);
+  border-width: 1px;
+  border-color: var(--color-slate-800);
+  border-radius: 1rem;
+  padding: 1.5rem;
+}
+
+.routingDependencyInjectionIoCSectionHeading {
+  font-size: 1.125rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-block-end: 0.5rem;
+  color: var(--color-white);
+}
+
+.routingElement {
+  inline-size: 1.25rem;
+  block-size: 1.25rem;
+  color: var(--color-blue-400);
+}
+
+.routingInMinimalAPIsDescription {
+  font-size: 0.75rem;
+  color: var(--color-slate-400);
+  margin-block-end: 1.25rem;
+}
+
+.routingDishesDbContextCodeText {
+  color: var(--color-cyan-300);
+}
+
+.routingAddTransientEveryRequestGrid {
+  display: grid;
+  grid-template-columns: repeat(1,minmax(0,1fr));
+  gap: 1rem;
+}
+
+.routingAddTransientEveryRequestContentPanel {
+  padding: 1rem;
+  border-radius: 0.75rem;
+  background-color: var(--color-slate-950);
+  border-width: 1px;
+  border-color: color-mix(in srgb, var(--color-blue-500) 30%, transparent);
+}
+
+.routingAddTransientEveryRequestRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-block-end: 0.5rem;
+}
+
+.routingAddTransientInlineText {
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--color-blue-400);
+}
+
+.routingEveryRequestContainerBadge {
+  padding-inline: 0.5rem;
+  padding-block: 0.125rem;
+  font-size: 10px;
+  border-radius: 0.375rem;
+  background-color: color-mix(in srgb, var(--color-blue-500) 20%, transparent);
+  color: var(--color-blue-300);
+}
+
+.routingBrandNewInstanceDescription {
+  font-size: 0.75rem;
+  color: var(--color-slate-300);
+}
+
+.routingAddScopedPerHTTPContentPanel {
+  padding: 1rem;
+  border-radius: 0.75rem;
+  background-color: var(--color-slate-950);
+  border-width: 1px;
+  border-color: color-mix(in srgb, var(--color-emerald-500) 40%, transparent);
+  outline: 1px solid var(--ring-color, currentColor);
+  --ring-color: color-mix(in srgb, var(--color-emerald-500) 20%, transparent);
+}
+
+.routingAddTransientEveryRequestRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-block-end: 0.5rem;
+}
+
+.routingAddScopedInlineText {
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--color-emerald-400);
+}
+
+.routingPerHTTPRequestBadge {
+  padding-inline: 0.5rem;
+  padding-block: 0.125rem;
+  font-size: 10px;
+  border-radius: 0.375rem;
+  background-color: color-mix(in srgb, var(--color-emerald-500) 20%, transparent);
+  color: var(--color-emerald-300);
+}
+
+.routingBrandNewInstanceDescription {
+  font-size: 0.75rem;
+  color: var(--color-slate-300);
+}
+
+.routingAddDbContextCodeText {
+  color: var(--color-emerald-300);
+}
+
+.routingAddSingletonApplicationLifetimeContentPanel {
+  padding: 1rem;
+  border-radius: 0.75rem;
+  background-color: var(--color-slate-950);
+  border-width: 1px;
+  border-color: color-mix(in srgb, var(--color-purple-500) 30%, transparent);
+}
+
+.routingAddTransientEveryRequestRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-block-end: 0.5rem;
+}
+
+.routingAddSingletonInlineText {
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--color-purple-400);
+}
+
+.routingApplicationLifetimeBadge {
+  padding-inline: 0.5rem;
+  padding-block: 0.125rem;
+  font-size: 10px;
+  border-radius: 0.375rem;
+  background-color: color-mix(in srgb, var(--color-purple-500) 20%, transparent);
+  color: var(--color-purple-300);
+}
+
+.routingBrandNewInstanceDescription {
+  font-size: 0.75rem;
+  color: var(--color-slate-300);
+}
+
+.routingRouteConstraintsAmbiguousGrid {
+  display: grid;
+  grid-template-columns: repeat(1,minmax(0,1fr));
+  gap: 1.5rem;
+}
+
+.routingRouteConstraintsAmbiguousContentPanel {
+  background-color: color-mix(in srgb, var(--color-slate-900) 90%, transparent);
+  border-width: 1px;
+  border-color: var(--color-slate-800);
+  border-radius: 1rem;
+  padding: 1.5rem;
+}
+
+.routingRouteConstraintsAmbiguousRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-block-end: 0.75rem;
+}
+
+.routingRouteConstraintsAmbiguousSectionHeading {
+  font-size: 1.125rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--color-white);
+}
+
+.routingElementInfo {
+  inline-size: 1.25rem;
+  block-size: 1.25rem;
+  color: var(--color-cyan-400);
+}
+
+.routingGuidConstraintFieldLabel {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.75rem;
+  background-color: var(--color-slate-950);
+  padding-inline: 0.75rem;
+  padding-block: 0.375rem;
+  border-radius: 0.5rem;
+  border-width: 1px;
+  border-color: var(--color-slate-700);
+  cursor: pointer;
+}
+
+.routingTextField {
+  accent-color: var(--color-cyan-400);
+}
+
+.routingGuidConstraintInlineText {
+  color: var(--color-cyan-300);
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+
+.routingWhatHappensWhenDescription {
+  font-size: 0.75rem;
+  color: var(--color-slate-400);
+  margin-block-end: 1rem;
+}
+
+.routingDishesDishIdCodeText {
+  color: var(--color-slate-200);
+}
+
+.routingDishesDishIdCodeText {
+  color: var(--color-slate-200);
+}
+
+.routingDishesDbContextCodeText {
+  color: var(--color-cyan-300);
+}
+
+.routingTestGUIDDishesRow {
+  display: flex;
+  gap: 0.5rem;
+  margin-block-end: 1rem;
+}
+
+.routingTestGUIDDishesButtonConditional {
+  padding-inline: 0.75rem;
+  padding-block: 0.375rem;
+  border-radius: 0.5rem;
+  font-size: 0.75rem;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  border-width: 1px;
+  transition: all 180ms ease;
+  background-color: color-mix(in srgb, var(--color-cyan-500) 20%, transparent);
+  border-color: var(--color-cyan-400);
+  color: var(--color-cyan-200);
+}
+
+.routingTestGUIDDishesButtonConditionalNeutral {
+  padding-inline: 0.75rem;
+  padding-block: 0.375rem;
+  border-radius: 0.5rem;
+  font-size: 0.75rem;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  border-width: 1px;
+  transition: all 180ms ease;
+  background-color: var(--color-slate-950);
+  border-color: var(--color-slate-800);
+  color: var(--color-slate-400);
+}
+
+.routingTestGUIDDishesButtonConditional {
+  padding-inline: 0.75rem;
+  padding-block: 0.375rem;
+  border-radius: 0.5rem;
+  font-size: 0.75rem;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  border-width: 1px;
+  transition: all 180ms ease;
+  background-color: color-mix(in srgb, var(--color-cyan-500) 20%, transparent);
+  border-color: var(--color-cyan-400);
+  color: var(--color-cyan-200);
+}
+
+.routingTestGUIDDishesButtonConditionalNeutral {
+  padding-inline: 0.75rem;
+  padding-block: 0.375rem;
+  border-radius: 0.5rem;
+  font-size: 0.75rem;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  border-width: 1px;
+  transition: all 180ms ease;
+  background-color: var(--color-slate-950);
+  border-color: var(--color-slate-800);
+  color: var(--color-slate-400);
+}
+
+.routingContentPanelConditional {
+  padding: 1rem;
+  border-radius: 0.75rem;
+  border-width: 1px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 0.75rem;
+  background-color: color-mix(in srgb, var(--color-rose-950) 40%, transparent);
+  border-color: color-mix(in srgb, var(--color-rose-500) 50%, transparent);
+  color: var(--color-rose-200);
+}
+
+.routingContentPanelConditionalSuccess {
+  padding: 1rem;
+  border-radius: 0.75rem;
+  border-width: 1px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 0.75rem;
+  background-color: color-mix(in srgb, var(--color-emerald-950) 40%, transparent);
+  border-color: color-mix(in srgb, var(--color-emerald-500) 40%, transparent);
+  color: var(--color-emerald-200);
+}
+
+.routing500InternalServerRow {
+  font-weight: 700;
+  color: var(--color-rose-400);
+  display: flex;
+  align-items: center;
+  gap: 0.375rem;
+  margin-block-end: 0.25rem;
+}
+
+.routingElementVariant2 {
+  inline-size: 1rem;
+  block-size: 1rem;
+}
+
+.routing200OKMatchedRow {
+  font-weight: 700;
+  color: var(--color-emerald-400);
+  display: flex;
+  align-items: center;
+  gap: 0.375rem;
+  margin-block-end: 0.25rem;
+}
+
+.routingElementVariant2 {
+  inline-size: 1rem;
+  block-size: 1rem;
+}
+
+.routingWhyShouldnExposeStack {
+  background-color: color-mix(in srgb, var(--color-slate-900) 90%, transparent);
+  border-width: 1px;
+  border-color: var(--color-slate-800);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.routingRouteConstraintsAmbiguousRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-block-end: 0.75rem;
+}
+
+.routingRouteConstraintsAmbiguousSectionHeading {
+  font-size: 1.125rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.routingElementWarning {
+  inline-size: 1.25rem;
+  block-size: 1.25rem;
+  color: var(--color-amber-400);
+}
+
+.routingRawEntityCycleRow {
+  display: flex;
+  background-color: var(--color-slate-950);
+  padding: 0.25rem;
+  border-radius: 0.75rem;
+  border-width: 1px;
+  border-color: var(--color-slate-800);
+}
+
+.routingRawEntityCycleButtonConditional {
+  padding-inline: 0.75rem;
+  padding-block: 0.25rem;
+  border-radius: 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  transition: all 180ms ease;
+  background-color: var(--color-rose-600);
+  color: var(--color-white);
+}
+
+.routingRawEntityCycleButtonConditionalNeutral {
+  padding-inline: 0.75rem;
+  padding-block: 0.25rem;
+  border-radius: 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  transition: all 180ms ease;
+  color: var(--color-slate-400);
+}
+
+.routingDTOExtensionButtonConditional {
+  padding-inline: 0.75rem;
+  padding-block: 0.25rem;
+  border-radius: 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  transition: all 180ms ease;
+  background-color: var(--color-emerald-600);
+  color: var(--color-white);
+}
+
+.routingRawEntityCycleButtonConditionalNeutral {
+  padding-inline: 0.75rem;
+  padding-block: 0.25rem;
+  border-radius: 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  transition: all 180ms ease;
+  color: var(--color-slate-400);
+}
+
+.routingWhatHappensWhenDescription {
+  font-size: 0.75rem;
+  color: var(--color-slate-400);
+  margin-block-end: 1rem;
+}
+
+.routingDishesDishIdCodeText {
+  color: var(--color-slate-200);
+}
+
+.routingDishesDbContextCodeText {
+  color: var(--color-cyan-300);
+}
+
+.routingSystemTextJsonContainerLayout {
+  --space-y: 1rem;
+}
+
+.routingSystemTextJsonContainerLayout > :not([hidden]) ~ :not([hidden]) {
+  margin-block-start: var(--space-y);
+}
+
+.routingSystemTextJsonContentPanel {
+  padding: 1rem;
+  border-radius: 0.75rem;
+  background-color: color-mix(in srgb, var(--color-rose-950) 30%, transparent);
+  border-width: 1px;
+  border-color: color-mix(in srgb, var(--color-rose-500) 40%, transparent);
+  font-size: 0.75rem;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  --space-y: 0.5rem;
+}
+
+.routingSystemTextJsonContentPanel > :not([hidden]) ~ :not([hidden]) {
+  margin-block-start: var(--space-y);
+}
+
+.routingSystemTextJsonRow {
+  color: var(--color-rose-300);
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.routingElementDanger {
+  inline-size: 1rem;
+  block-size: 1rem;
+  color: var(--color-rose-400);
+}
+
+.routingDishRendangIngredientsRow {
+  color: var(--color-slate-300);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  padding-block: 0.5rem;
+}
+
+.routingDishRendangBadge {
+  padding-inline: 0.5rem;
+  padding-block: 0.25rem;
+  border-radius: 0.375rem;
+  background-color: var(--color-slate-900);
+  border-width: 1px;
+  border-color: color-mix(in srgb, var(--color-rose-500) 40%, transparent);
+}
+
+.routingDishRendangBadge {
+  padding-inline: 0.5rem;
+  padding-block: 0.25rem;
+  border-radius: 0.375rem;
+  background-color: var(--color-slate-900);
+  border-width: 1px;
+  border-color: color-mix(in srgb, var(--color-rose-500) 40%, transparent);
+}
+
+.routingDishRendangBadge {
+  padding-inline: 0.5rem;
+  padding-block: 0.25rem;
+  border-radius: 0.375rem;
+  background-color: var(--color-slate-900);
+  border-width: 1px;
+  border-color: color-mix(in srgb, var(--color-rose-500) 40%, transparent);
+}
+
+.routingINFINITELOOPInlineText {
+  color: var(--color-rose-400);
+  font-weight: 700;
+}
+
+.routingSystemTextJsonContainerLayout {
+  --space-y: 1rem;
+}
+
+.routingSystemTextJsonContainerLayout > :not([hidden]) ~ :not([hidden]) {
+  margin-block-start: var(--space-y);
+}
+
+.routingCleanOutwardFacingContentPanel {
+  padding: 1rem;
+  border-radius: 0.75rem;
+  background-color: color-mix(in srgb, var(--color-emerald-950) 30%, transparent);
+  border-width: 1px;
+  border-color: color-mix(in srgb, var(--color-emerald-500) 40%, transparent);
+  font-size: 0.75rem;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  --space-y: 0.5rem;
+}
+
+.routingCleanOutwardFacingContentPanel > :not([hidden]) ~ :not([hidden]) {
+  margin-block-start: var(--space-y);
+}
+
+.routingCleanOutwardFacingRow {
+  color: var(--color-emerald-300);
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.routingElementSuccess {
+  inline-size: 1rem;
+  block-size: 1rem;
+  color: var(--color-emerald-400);
+}
+
+.routingFlattensManyManyContainerLayout {
+  color: var(--color-slate-300);
+}
+
+.routingAddDbContextCodeText {
+  color: var(--color-emerald-300);
+}
+
+.routingDishesDbContextCodeText {
+  color: var(--color-cyan-300);
+}
+
+.routingProTipCourseContentPanel {
+  margin-block-start: 0.75rem;
+  padding: 0.75rem;
+  border-radius: 0.75rem;
+  background-color: var(--color-slate-950);
+  border-width: 1px;
+  border-color: var(--color-slate-800);
+  font-size: 0.75rem;
+  color: var(--color-slate-400);
+}
+
+.routingDishesDishIdCodeText {
+  color: var(--color-slate-200);
+}
+
+.routingDependencyInjectionIoCContentPanel {
+  background-color: color-mix(in srgb, var(--color-slate-900) 90%, transparent);
+  border-width: 1px;
+  border-color: var(--color-slate-800);
+  border-radius: 1rem;
+  padding: 1.5rem;
+}
+
+.routingDependencyInjectionIoCSectionHeading {
+  font-size: 1.125rem;
+  font-weight: 700;
+  margin-block-end: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.routingElementAccent {
+  inline-size: 1.25rem;
+  block-size: 1.25rem;
+  color: var(--color-violet-400);
+}
+
+.routingWhatHappensWhenDescription {
+  font-size: 0.75rem;
+  color: var(--color-slate-400);
+  margin-block-end: 1rem;
+}
+
+.routingFromQueryCodeText {
+  color: var(--color-violet-300);
+}
+
+.routingFromQueryCodeText {
+  color: var(--color-violet-300);
+}
+
+.routingGrid {
+  display: grid;
+  grid-template-columns: repeat(1,minmax(0,1fr));
+  gap: 0.75rem;
+}
+
+.routingRuleStack {
+  padding: 0.875rem;
+  border-radius: 0.75rem;
+  background-color: var(--color-slate-950);
+  border-width: 1px;
+  border-color: var(--color-slate-800);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.routingRuleBadge {
+  display: inline-block;
+  padding-inline: 0.5rem;
+  padding-block: 0.125rem;
+  border-radius: 0.375rem;
+  background-color: color-mix(in srgb, var(--color-violet-500) 20%, transparent);
+  color: var(--color-violet-300);
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 0.75rem;
+  font-weight: 700;
+  margin-block-end: 0.5rem;
+}
+
+.routingContainerLayout {
+  font-weight: 700;
+  font-size: 0.875rem;
+  margin-block-end: 0.25rem;
+  color: var(--color-white);
+}
+
+.routingContainerLayoutNeutral {
+  font-size: 11px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  color: var(--color-slate-400);
+  margin-block-start: 0.5rem;
+}
+
+.responsesReturnTypesLabContainerLayout {
+  --space-y: 2rem;
+}
+
+.responsesReturnTypesLabContainerLayout > :not([hidden]) ~ :not([hidden]) {
+  margin-block-start: var(--space-y);
+}
+
+.responsesReturnTypesLabContentPanel {
+  background-color: color-mix(in srgb, var(--color-slate-900) 90%, transparent);
+  border-width: 1px;
+  border-color: var(--color-slate-800);
+  border-radius: 1rem;
+  padding: 1.5rem;
+}
+
+.responsesReturnTypesLabRow {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-block-end: 1rem;
+}
+
+.responsesReturnTypesLabSectionHeading {
+  font-size: 1.125rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--color-white);
+}
+
+.responsesElement {
+  inline-size: 1.25rem;
+  block-size: 1.25rem;
+  color: var(--color-emerald-400);
+}
+
+.responsesTaskResultsNotFoundCodeText {
+  color: var(--color-emerald-300);
+}
+
+.responsesInPage18Description {
+  font-size: 0.75rem;
+  color: var(--color-slate-400);
+  margin-block-start: 0.25rem;
+}
+
+.responsesTypedResultsNotFoundCodeText {
+  color: var(--color-slate-200);
+}
+
+.responsesTypedResultsNotFoundCodeText {
+  color: var(--color-slate-200);
+}
+
+.responsesDelegateRequestDelegateDoesInlineText {
+  color: var(--color-rose-400);
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+
+.responsesImplicitTypedResultsErrorRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.responsesImplicitTypedResultsErrorButtonConditional {
+  padding-inline: 0.75rem;
+  padding-block: 0.375rem;
+  border-radius: 0.75rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  transition: all 180ms ease;
+  background-color: var(--color-rose-600);
+  color: var(--color-white);
+}
+
+.responsesImplicitTypedResultsErrorButtonConditionalNeutral {
+  padding-inline: 0.75rem;
+  padding-block: 0.375rem;
+  border-radius: 0.75rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  transition: all 180ms ease;
+  background-color: var(--color-slate-950);
+  color: var(--color-slate-400);
+  border-width: 1px;
+  border-color: var(--color-slate-800);
+}
+
+.responsesResultsOkLosesButtonConditional {
+  padding-inline: 0.75rem;
+  padding-block: 0.375rem;
+  border-radius: 0.75rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  transition: all 180ms ease;
+  background-color: var(--color-amber-600);
+  color: var(--color-white);
+}
+
+.responsesImplicitTypedResultsErrorButtonConditionalNeutral {
+  padding-inline: 0.75rem;
+  padding-block: 0.375rem;
+  border-radius: 0.75rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  transition: all 180ms ease;
+  background-color: var(--color-slate-950);
+  color: var(--color-slate-400);
+  border-width: 1px;
+  border-color: var(--color-slate-800);
+}
+
+.responsesExplicitTypedResultsUnionButtonConditional {
+  padding-inline: 0.75rem;
+  padding-block: 0.375rem;
+  border-radius: 0.75rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  transition: all 180ms ease;
+  background-color: var(--color-emerald-600);
+  color: var(--color-white);
+}
+
+.responsesImplicitTypedResultsErrorButtonConditionalNeutral {
+  padding-inline: 0.75rem;
+  padding-block: 0.375rem;
+  border-radius: 0.75rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  transition: all 180ms ease;
+  background-color: var(--color-slate-950);
+  color: var(--color-slate-400);
+  border-width: 1px;
+  border-color: var(--color-slate-800);
+}
+
+.responsesCS1593DelegateRequestDelegateContainerLayout {
+  --space-y: 0.75rem;
+}
+
+.responsesCS1593DelegateRequestDelegateContainerLayout > :not([hidden]) ~ :not([hidden]) {
+  margin-block-start: var(--space-y);
+}
+
+.responsesCS1593DelegateRequestDelegateContentPanel {
+  padding: 1rem;
+  border-radius: 0.75rem;
+  background-color: color-mix(in srgb, var(--color-rose-950) 40%, transparent);
+  border-width: 1px;
+  border-color: color-mix(in srgb, var(--color-rose-500) 40%, transparent);
+  font-size: 0.75rem;
+  color: var(--color-rose-200);
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+
+.responsesCS1593DelegateRequestDelegateContainerLayout {
+  --space-y: 0.75rem;
+}
+
+.responsesCS1593DelegateRequestDelegateContainerLayout > :not([hidden]) ~ :not([hidden]) {
+  margin-block-start: var(--space-y);
+}
+
+.responsesCompilesButHidesContentPanel {
+  padding: 1rem;
+  border-radius: 0.75rem;
+  background-color: color-mix(in srgb, var(--color-amber-950) 40%, transparent);
+  border-width: 1px;
+  border-color: color-mix(in srgb, var(--color-amber-500) 40%, transparent);
+  font-size: 0.75rem;
+  color: var(--color-amber-200);
+}
+
+.responsesResultsCodeText {
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+
+.responsesResultsCodeText {
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+
+.responsesCS1593DelegateRequestDelegateContainerLayout {
+  --space-y: 0.75rem;
+}
+
+.responsesCS1593DelegateRequestDelegateContainerLayout > :not([hidden]) ~ :not([hidden]) {
+  margin-block-start: var(--space-y);
+}
+
+.responsesCompileTimeSafetyContentPanel {
+  padding: 1rem;
+  border-radius: 0.75rem;
+  background-color: color-mix(in srgb, var(--color-emerald-950) 40%, transparent);
+  border-width: 1px;
+  border-color: color-mix(in srgb, var(--color-emerald-500) 40%, transparent);
+  font-size: 0.75rem;
+  color: var(--color-emerald-200);
+}
+
+.responsesResultsCodeText {
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+
+.responsesResultsCodeText {
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+
+.responsesResultsCodeText {
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+
+.responsesResultsCodeText {
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+
+.responsesReturnTypesLabContentPanel {
+  background-color: color-mix(in srgb, var(--color-slate-900) 90%, transparent);
+  border-width: 1px;
+  border-color: var(--color-slate-800);
+  border-radius: 1rem;
+  padding: 1.5rem;
+}
+
+.responsesRFC9457ProblemSectionHeading {
+  font-size: 1.125rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-block-end: 0.5rem;
+  color: var(--color-white);
+}
+
+.responsesElementWarning {
+  inline-size: 1.25rem;
+  block-size: 1.25rem;
+  color: var(--color-amber-400);
+}
+
+.responsesToggleAppUseStatusCodePagesDescription {
+  font-size: 0.75rem;
+  color: var(--color-slate-400);
+  margin-block-end: 1.5rem;
+}
+
+.responsesAppUseStatusCodePagesCodeText {
+  color: var(--color-cyan-300);
+}
+
+.responsesAppUseStatusCodePagesCodeText {
+  color: var(--color-cyan-300);
+}
+
+.responsesPipelineEnvironmentControlsGrid {
+  display: grid;
+  grid-template-columns: repeat(1,minmax(0,1fr));
+  gap: 1.5rem;
+}
+
+.responsesPipelineEnvironmentControlsContainerLayout {
+  --space-y: 1rem;
+}
+
+.responsesPipelineEnvironmentControlsContainerLayout > :not([hidden]) ~ :not([hidden]) {
+  margin-block-start: var(--space-y);
+}
+
+.responsesPipelineEnvironmentControlsContentPanel {
+  padding: 1rem;
+  border-radius: 0.75rem;
+  background-color: var(--color-slate-950);
+  border-width: 1px;
+  border-color: var(--color-slate-800);
+  --space-y: 0.75rem;
+}
+
+.responsesPipelineEnvironmentControlsContentPanel > :not([hidden]) ~ :not([hidden]) {
+  margin-block-start: var(--space-y);
+}
+
+.responsesPipelineEnvironmentControlsContainerLayoutNeutral {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-slate-400);
+}
+
+.responsesASPNETCOREENVIRONMENTDevelopmentRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.responsesASPNETCOREENVIRONMENTInlineText {
+  font-size: 0.75rem;
+  color: var(--color-slate-200);
+}
+
+.responsesDevelopmentProductionRow {
+  display: flex;
+  background-color: var(--color-slate-900);
+  padding: 0.25rem;
+  border-radius: 0.5rem;
+  border-width: 1px;
+  border-color: var(--color-slate-700);
+}
+
+.responsesDevelopmentButtonConditional {
+  padding-inline: 0.625rem;
+  padding-block: 0.25rem;
+  border-radius: 0.375rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  background-color: var(--color-violet-600);
+  color: var(--color-white);
+}
+
+.responsesDevelopmentButtonConditionalNeutral {
+  padding-inline: 0.625rem;
+  padding-block: 0.25rem;
+  border-radius: 0.375rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--color-slate-400);
+}
+
+.responsesProductionButtonConditional {
+  padding-inline: 0.625rem;
+  padding-block: 0.25rem;
+  border-radius: 0.375rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  background-color: var(--color-emerald-600);
+  color: var(--color-white);
+}
+
+.responsesDevelopmentButtonConditionalNeutral {
+  padding-inline: 0.625rem;
+  padding-block: 0.25rem;
+  border-radius: 0.375rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--color-slate-400);
+}
+
+.responsesAppUseStatusCodePagesTranslatesFieldLabel {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  padding-block-start: 0.5rem;
+  border-block-start-width: 1px;
+  border-color: var(--color-slate-800);
+}
+
+.responsesAppUseStatusCodePagesContainerLayout {
+  font-size: 0.75rem;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  color: var(--color-white);
+}
+
+.responsesTranslatesEmpty404ContainerLayout {
+  font-size: 11px;
+  color: var(--color-slate-400);
+}
+
+.responsesTextField {
+  inline-size: 1rem;
+  block-size: 1rem;
+  accent-color: var(--color-emerald-500);
+}
+
+.responsesTestErrorScenarioContainerLayout {
+  padding-block-start: 0.5rem;
+  border-block-start-width: 1px;
+  border-color: var(--color-slate-800);
+}
+
+.responsesTestErrorScenarioContainerLayoutNeutral {
+  font-size: 0.75rem;
+  color: var(--color-slate-300);
+  margin-block-end: 0.5rem;
+}
+
+.responsesGETDishesUnknownGrid {
+  display: grid;
+  grid-template-columns: repeat(2,minmax(0,1fr));
+  gap: 0.5rem;
+}
+
+.responsesGETDishesUnknownButtonConditional {
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  font-size: 0.75rem;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  border-width: 1px;
+  background-color: color-mix(in srgb, var(--color-amber-500) 20%, transparent);
+  border-color: var(--color-amber-400);
+  color: var(--color-amber-200);
+}
+
+.responsesGETDishesUnknownButtonConditionalNeutral {
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  font-size: 0.75rem;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  border-width: 1px;
+  background-color: var(--color-slate-900);
+  border-color: var(--color-slate-800);
+  color: var(--color-slate-400);
+}
+
+.responsesGETTesterror500ButtonConditional {
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  font-size: 0.75rem;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  border-width: 1px;
+  background-color: color-mix(in srgb, var(--color-rose-500) 20%, transparent);
+  border-color: var(--color-rose-400);
+  color: var(--color-rose-200);
+}
+
+.responsesGETDishesUnknownButtonConditionalNeutral {
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  font-size: 0.75rem;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  border-width: 1px;
+  background-color: var(--color-slate-900);
+  border-color: var(--color-slate-800);
+  color: var(--color-slate-400);
+}
+
+.responsesHTTPResponseInspectorStack {
+  border-radius: 0.75rem;
+  border-width: 1px;
+  border-color: var(--color-slate-700);
+  background-color: var(--color-slate-950);
+  overflow: hidden;
+  block-size: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.responsesHTTPResponseInspectorRow {
+  padding-inline: 1rem;
+  padding-block: 0.75rem;
+  background-color: var(--color-slate-900);
+  border-block-end-width: 1px;
+  border-color: var(--color-slate-800);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.responsesHTTPResponseInspectorInlineText {
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 0.75rem;
+  color: var(--color-slate-300);
+}
+
+.responsesBadgeConditional {
+  padding-inline: 0.625rem;
+  padding-block: 0.125rem;
+  border-radius: 0.375rem;
+  font-size: 0.75rem;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-weight: 700;
+  background-color: color-mix(in srgb, var(--color-amber-500) 20%, transparent);
+  color: var(--color-amber-300);
+}
+
+.responsesBadgeConditionalDanger {
+  padding-inline: 0.625rem;
+  padding-block: 0.125rem;
+  border-radius: 0.375rem;
+  font-size: 0.75rem;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-weight: 700;
+  background-color: color-mix(in srgb, var(--color-rose-500) 20%, transparent);
+  color: var(--color-rose-300);
+}
+
+.responsesContentTypeRow {
+  padding: 1rem;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 0.75rem;
+  color: var(--color-slate-300);
+  --space-y: 0.75rem;
+  flex: 1 1 0%;
+}
+
+.responsesContentTypeRow > :not([hidden]) ~ :not([hidden]) {
+  margin-block-start: var(--space-y);
+}
+
+.responsesContentTypeContainerLayout {
+  color: var(--color-slate-400);
+}
+
+.responsesCodeText {
+  padding: 1rem;
+  border-radius: 0.75rem;
+  background-color: color-mix(in srgb, var(--color-slate-900) 90%, transparent);
+  border-width: 1px;
+  border-color: var(--color-slate-800);
+  color: var(--color-emerald-300);
+  overflow-x: auto;
+  line-height: 1.625;
+}
+
+.responsesContentPanelConditional {
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  border-width: 1px;
+  font-size: 0.75rem;
+  background-color: color-mix(in srgb, var(--color-amber-950) 30%, transparent);
+  border-color: color-mix(in srgb, var(--color-amber-500) 30%, transparent);
+  color: var(--color-amber-200);
+}
+
+.responsesContentPanelConditionalSuccess {
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  border-width: 1px;
+  font-size: 0.75rem;
+  background-color: color-mix(in srgb, var(--color-emerald-950) 30%, transparent);
+  border-color: color-mix(in srgb, var(--color-emerald-500) 30%, transparent);
+  color: var(--color-emerald-200);
+}
+
+.crudInteractiveDishesAPIHttpContainerLayout {
+  --space-y: 2rem;
+}
+
+.crudInteractiveDishesAPIHttpContainerLayout > :not([hidden]) ~ :not([hidden]) {
+  margin-block-start: var(--space-y);
+}
+
+.crudInteractiveDishesAPIHttpContentPanel {
+  background-color: color-mix(in srgb, var(--color-slate-900) 90%, transparent);
+  border-width: 1px;
+  border-color: var(--color-slate-800);
+  border-radius: 1rem;
+  padding: 1.5rem;
+}
+
+.crudInteractiveDishesAPIHttpRow {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-block-end: 1.5rem;
+}
+
+.crudInteractiveDishesAPIHttpSectionHeading {
+  font-size: 1.125rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--color-white);
+}
+
+.crudElement {
+  inline-size: 1.25rem;
+  block-size: 1.25rem;
+  color: var(--color-amber-400);
+}
+
+.crudDishesAPIHttpCodeText {
+  color: var(--color-amber-300);
+}
+
+.crudTestGETPOSTDescription {
+  font-size: 0.75rem;
+  color: var(--color-slate-400);
+  margin-block-start: 0.25rem;
+}
+
+.crudCreatedAtRouteCodeText {
+  color: var(--color-emerald-300);
+}
+
+.crudGetDishCodeText {
+  color: var(--color-cyan-300);
+}
+
+.crudDishesAPIHttpCodeText {
+  color: var(--color-amber-300);
+}
+
+.crudReSeedDishesButton {
+  display: flex;
+  align-items: center;
+  gap: 0.375rem;
+  padding-inline: 0.75rem;
+  padding-block: 0.375rem;
+  border-radius: 0.75rem;
+  background-color: var(--color-slate-800);
+  font-size: 0.75rem;
+  color: var(--color-slate-200);
+  border-width: 1px;
+  border-color: var(--color-slate-700);
+  transition: all 180ms ease;
+}
+
+.crudReSeedDishesButton:hover {
+  background-color: var(--color-slate-700);
+}
+
+.crudElementVariant2 {
+  inline-size: 0.875rem;
+  block-size: 0.875rem;
+}
+
+.crudBaseUrlHttpsLocalhostGrid {
+  display: grid;
+  grid-template-columns: repeat(1,minmax(0,1fr));
+  gap: 1.5rem;
+}
+
+.crudBaseUrlHttpsLocalhostContainerLayout {
+  --space-y: 1rem;
+}
+
+.crudBaseUrlHttpsLocalhostContainerLayout > :not([hidden]) ~ :not([hidden]) {
+  margin-block-start: var(--space-y);
+}
+
+.crudRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.crudBaseUrlHttpsLocalhostContentPanel {
+  padding: 1rem;
+  border-radius: 0.75rem;
+  background-color: var(--color-slate-950);
+  border-width: 1px;
+  border-color: var(--color-slate-800);
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 0.75rem;
+  --space-y: 0.75rem;
+}
+
+.crudBaseUrlHttpsLocalhostContentPanel > :not([hidden]) ~ :not([hidden]) {
+  margin-block-start: var(--space-y);
+}
+
+.crudBaseUrlHttpsLocalhostContainerLayoutNeutral {
+  color: var(--color-slate-500);
+}
+
+.crudBaseUrlHttpsLocalhostContainerLayoutNeutral {
+  color: var(--color-slate-500);
+}
+
+.crudGETBaseUrlDishesContainerLayout {
+  color: var(--color-emerald-300);
+  font-weight: 700;
+}
+
+.crudGETBaseUrlDishesContainerLayoutVariant2 {
+  --space-y: 0.5rem;
+}
+
+.crudGETBaseUrlDishesContainerLayoutVariant2 > :not([hidden]) ~ :not([hidden]) {
+  margin-block-start: var(--space-y);
+}
+
+.crudGETBaseUrlDishesContainerLayout {
+  color: var(--color-emerald-300);
+  font-weight: 700;
+}
+
+.crudQueryStringNameRow {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding-block-start: 0.25rem;
+}
+
+.crudQueryStringNameInlineText {
+  color: var(--color-slate-400);
+}
+
+.crudFilterDishesByTextField {
+  background-color: var(--color-slate-900);
+  border-width: 1px;
+  border-color: var(--color-slate-700);
+  border-radius: 0.375rem;
+  padding-inline: 0.625rem;
+  padding-block: 0.25rem;
+  color: var(--color-white);
+}
+
+.crudGETBaseUrlDishesContainerLayoutVariant2 {
+  --space-y: 0.5rem;
+}
+
+.crudGETBaseUrlDishesContainerLayoutVariant2 > :not([hidden]) ~ :not([hidden]) {
+  margin-block-start: var(--space-y);
+}
+
+.crudTargetDishGUIDRow {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.crudQueryStringNameInlineText {
+  color: var(--color-slate-400);
+}
+
+.crudTargetDishGUIDSelect {
+  background-color: var(--color-slate-900);
+  border-width: 1px;
+  border-color: var(--color-slate-700);
+  border-radius: 0.375rem;
+  padding-inline: 0.625rem;
+  padding-block: 0.25rem;
+  color: var(--color-amber-300);
+  font-size: 0.75rem;
+}
+
+.crudGETBaseUrlDishesContainerLayoutVariant2 {
+  --space-y: 0.5rem;
+}
+
+.crudGETBaseUrlDishesContainerLayoutVariant2 > :not([hidden]) ~ :not([hidden]) {
+  margin-block-start: var(--space-y);
+}
+
+.crudPOSTBaseUrlDishesContainerLayout {
+  color: var(--color-amber-300);
+  font-weight: 700;
+}
+
+.crudGetDishCodeText {
+  color: var(--color-cyan-300);
+}
+
+.crudQueryStringNameRow {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding-block-start: 0.25rem;
+}
+
+.crudQueryStringNameInlineText {
+  color: var(--color-slate-400);
+}
+
+.crudFilterDishesByTextField {
+  background-color: var(--color-slate-900);
+  border-width: 1px;
+  border-color: var(--color-slate-700);
+  border-radius: 0.375rem;
+  padding-inline: 0.625rem;
+  padding-block: 0.25rem;
+}
+
+.crudCodeText {
+  color: var(--color-slate-300);
+  background-color: var(--color-slate-900);
+  padding: 0.5rem;
+  border-radius: 0.375rem;
+  border-width: 1px;
+  border-color: var(--color-slate-800);
+}
+
+.crudGETBaseUrlDishesContainerLayoutVariant2 {
+  --space-y: 0.5rem;
+}
+
+.crudGETBaseUrlDishesContainerLayoutVariant2 > :not([hidden]) ~ :not([hidden]) {
+  margin-block-start: var(--space-y);
+}
+
+.crudPUTBaseUrlDishesContainerLayout {
+  color: var(--color-blue-300);
+  font-weight: 700;
+}
+
+.crudGetDishCodeText {
+  color: var(--color-cyan-300);
+}
+
+.crudQueryStringNameRow {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding-block-start: 0.25rem;
+}
+
+.crudQueryStringNameInlineText {
+  color: var(--color-slate-400);
+}
+
+.crudFilterDishesByTextField {
+  background-color: var(--color-slate-900);
+  border-width: 1px;
+  border-color: var(--color-slate-700);
+  border-radius: 0.375rem;
+  padding-inline: 0.625rem;
+  padding-block: 0.25rem;
+}
+
+.crudSendRequestVisualButton {
+  inline-size: 100%;
+  padding-block: 0.625rem;
+  border-radius: 0.75rem;
+  background-image: linear-gradient(to right,var(--g-from,transparent),var(--g-to,transparent));
+  --g-from: var(--color-amber-500);
+  --g-to: var(--color-orange-600);
+  font-family: system-ui, sans-serif;
+  font-weight: 600;
+  font-size: 0.75rem;
+  box-shadow: 0 10px 20px -8px rgb(0 0 0 / 0.4);
+  transition: all 180ms ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  color: var(--color-white);
+}
+
+.crudSendRequestVisualButton:hover {
+  opacity: 0.95;
+}
+
+.crudElementVariant3 {
+  inline-size: 1rem;
+  block-size: 1rem;
+  fill: currentColor;
+}
+
+.crudCurrentSQLiteDishesContentPanel {
+  padding: 1rem;
+  border-radius: 0.75rem;
+  background-color: var(--color-slate-950);
+  border-width: 1px;
+  border-color: var(--color-slate-800);
+}
+
+.crudCurrentSQLiteDishesRow {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--color-slate-400);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-block-end: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.crudDishesDbContextDishesInlineText {
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 11px;
+  color: var(--color-emerald-400);
+}
+
+.crudContainerLayout {
+  --space-y: 0.375rem;
+}
+
+.crudContainerLayout > :not([hidden]) ~ :not([hidden]) {
+  margin-block-start: var(--space-y);
+}
+
+.crudRowNeutral {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-inline: 0.75rem;
+  padding-block: 0.375rem;
+  border-radius: 0.375rem;
+  background-color: var(--color-slate-900);
+  border-width: 1px;
+  border-color: var(--color-slate-800);
+  font-size: 0.75rem;
+}
+
+.crudInlineText {
+  font-weight: 600;
+  color: var(--color-white);
+}
+
+.crudInlineTextNeutral {
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  color: var(--color-slate-400);
+}
+
+.crudResponseOutputHowStack {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  --space-y: 1rem;
+}
+
+.crudResponseOutputHowStack > :not([hidden]) ~ :not([hidden]) {
+  margin-block-start: var(--space-y);
+}
+
+.crudResponseOutputStack {
+  border-radius: 0.75rem;
+  border-width: 1px;
+  border-color: var(--color-slate-700);
+  background-color: var(--color-slate-950);
+  overflow: hidden;
+  flex: 1 1 0%;
+  display: flex;
+  flex-direction: column;
+}
+
+.crudResponseOutputRow {
+  padding-inline: 1rem;
+  padding-block: 0.75rem;
+  background-color: var(--color-slate-900);
+  border-block-end-width: 1px;
+  border-color: var(--color-slate-800);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.crudResponseOutputInlineText {
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 0.75rem;
+  color: var(--color-slate-300);
+}
+
+.crudBadgeConditional {
+  padding-inline: 0.625rem;
+  padding-block: 0.125rem;
+  border-radius: 0.375rem;
+  font-size: 0.75rem;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-weight: 700;
+  background-color: color-mix(in srgb, var(--color-emerald-500) 20%, transparent);
+  color: var(--color-emerald-300);
+}
+
+.crudBadgeConditionalDanger {
+  padding-inline: 0.625rem;
+  padding-block: 0.125rem;
+  border-radius: 0.375rem;
+  font-size: 0.75rem;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-weight: 700;
+  background-color: color-mix(in srgb, var(--color-rose-500) 20%, transparent);
+  color: var(--color-rose-300);
+}
+
+.crudRowVariant2 {
+  padding: 1rem;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 0.75rem;
+  flex: 1 1 0%;
+}
+
+.crudClickSendRequestRow {
+  color: var(--color-slate-500);
+  block-size: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-block: 3rem;
+  text-align: center;
+}
+
+.crudContainerLayoutVariant2 {
+  --space-y: 0.75rem;
+}
+
+.crudContainerLayoutVariant2 > :not([hidden]) ~ :not([hidden]) {
+  margin-block-start: var(--space-y);
+}
+
+.crudContainerLayoutInfo {
+  color: var(--color-cyan-300);
+  overflow-wrap: anywhere;
+}
+
+.crudQueryStringNameInlineText {
+  color: var(--color-slate-400);
+}
+
+.crudCodeTextSuccess {
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  background-color: var(--color-slate-900);
+  border-width: 1px;
+  border-color: var(--color-slate-800);
+  color: var(--color-emerald-300);
+  overflow-x: auto;
+}
+
+.crudHowCreatedAtRouteGeneratesContentPanel {
+  padding: 1rem;
+  border-radius: 0.75rem;
+  background-color: var(--color-slate-950);
+  border-width: 1px;
+  border-color: color-mix(in srgb, var(--color-amber-500) 30%, transparent);
+  font-size: 0.75rem;
+  --space-y: 0.375rem;
+}
+
+.crudHowCreatedAtRouteGeneratesContentPanel > :not([hidden]) ~ :not([hidden]) {
+  margin-block-start: var(--space-y);
+}
+
+.crudPOSTBaseUrlDishesContainerLayout {
+  font-weight: 700;
+  color: var(--color-amber-300);
+}
+
+.crudByChainingWithNameDescription {
+  color: var(--color-slate-300);
+}
+
+.crudGetDishCodeText {
+  color: var(--color-cyan-300);
+}
+
+.crudMapGetDishesDishIdCodeText {
+  color: var(--color-slate-200);
+}
+
+.crudCreatedAtRouteCodeText {
+  color: var(--color-emerald-300);
+}
+
+.crudGetDishCodeText {
+  color: var(--color-cyan-300);
+}
+
+.crudInteractiveDishesAPIHttpContentPanel {
+  background-color: color-mix(in srgb, var(--color-slate-900) 90%, transparent);
+  border-width: 1px;
+  border-color: var(--color-slate-800);
+  border-radius: 1rem;
+  padding: 1.5rem;
+}
+
+.crudOrganizingSharedPrefixesSectionHeading {
+  font-size: 1.125rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-block-end: 0.5rem;
+  color: var(--color-white);
+}
+
+.crudElement {
+  inline-size: 1.25rem;
+  block-size: 1.25rem;
+  color: var(--color-amber-400);
+}
+
+.crudDishesAPIHttpCodeText {
+  color: var(--color-amber-300);
+}
+
+.crudInsteadRepeatingDishesDescription {
+  font-size: 0.75rem;
+  color: var(--color-slate-400);
+  margin-block-end: 1rem;
+}
+
+.crudMapGetDishesDishIdCodeText {
+  color: var(--color-slate-200);
+}
+
+.crudDishesEndpointsAppMapGroupGrid {
+  display: grid;
+  grid-template-columns: repeat(1,minmax(0,1fr));
+  gap: 1rem;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 0.75rem;
+}
+
+.crudDishesEndpointsAppMapGroupContentPanel {
+  padding: 1rem;
+  border-radius: 0.75rem;
+  background-color: var(--color-slate-950);
+  border-width: 1px;
+  border-color: color-mix(in srgb, var(--color-amber-500) 30%, transparent);
+}
+
+.crudDishesEndpointsContainerLayout {
+  color: var(--color-amber-400);
+  font-weight: 700;
+  margin-block-end: 0.5rem;
+}
+
+.crudAppMapGroupDishesContainerLayout {
+  color: var(--color-slate-400);
+  margin-block-end: 0.5rem;
+}
+
+.crudMapGetGetDishesAsyncMapGetList {
+  --space-y: 0.25rem;
+  color: var(--color-slate-200);
+}
+
+.crudMapGetGetDishesAsyncMapGetList > :not([hidden]) ~ :not([hidden]) {
+  margin-block-start: var(--space-y);
+}
+
+.crudDishWithGuidIdEndpointsDishesEndpointsMapGroupContentPanel {
+  padding: 1rem;
+  border-radius: 0.75rem;
+  background-color: var(--color-slate-950);
+  border-width: 1px;
+  border-color: color-mix(in srgb, var(--color-orange-500) 30%, transparent);
+}
+
+.crudDishWithGuidIdEndpointsContainerLayout {
+  color: var(--color-orange-400);
+  font-weight: 700;
+  margin-block-end: 0.5rem;
+}
+
+.crudAppMapGroupDishesContainerLayout {
+  color: var(--color-slate-400);
+  margin-block-end: 0.5rem;
+}
+
+.crudMapGetGetDishesAsyncMapGetList {
+  --space-y: 0.25rem;
+  color: var(--color-slate-200);
+}
+
+.crudMapGetGetDishesAsyncMapGetList > :not([hidden]) ~ :not([hidden]) {
+  margin-block-start: var(--space-y);
+}
+
+.crudIngredientsEndpointsDishWithGuidIdEndpointsMapGroupContentPanel {
+  padding: 1rem;
+  border-radius: 0.75rem;
+  background-color: var(--color-slate-950);
+  border-width: 1px;
+  border-color: color-mix(in srgb, var(--color-rose-500) 30%, transparent);
+}
+
+.crudIngredientsEndpointsContainerLayout {
+  color: var(--color-rose-400);
+  font-weight: 700;
+  margin-block-end: 0.5rem;
+}
+
+.crudAppMapGroupDishesContainerLayout {
+  color: var(--color-slate-400);
+  margin-block-end: 0.5rem;
+}
+
+.crudMapGetGetDishesAsyncMapGetList {
+  --space-y: 0.25rem;
+  color: var(--color-slate-200);
+}
+
+.crudMapGetGetDishesAsyncMapGetList > :not([hidden]) ~ :not([hidden]) {
+  margin-block-start: var(--space-y);
+}
+
+.architectureNewInNETContainerLayout {
+  --space-y: 2rem;
+}
+
+.architectureNewInNETContainerLayout > :not([hidden]) ~ :not([hidden]) {
+  margin-block-start: var(--space-y);
+}
+
+.architectureNewInNETContentPanel {
+  background-color: color-mix(in srgb, var(--color-slate-900) 90%, transparent);
+  border-width: 1px;
+  border-color: var(--color-slate-800);
+  border-radius: 1rem;
+  padding: 1.5rem;
+}
+
+.architectureNewInNETRow {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-block-end: 1rem;
+}
+
+.architectureNewInNETBadge {
+  padding-inline: 0.625rem;
+  padding-block: 0.125rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  background-color: color-mix(in srgb, var(--color-pink-500) 20%, transparent);
+  color: var(--color-pink-300);
+  border-width: 1px;
+  border-color: color-mix(in srgb, var(--color-pink-500) 30%, transparent);
+}
+
+.architectureBuiltInDataSectionHeading {
+  font-size: 1.125rem;
+  font-weight: 700;
+  margin-block-start: 0.5rem;
+  color: var(--color-white);
+}
+
+.architectureBuilderServicesAddValidationCodeText {
+  color: var(--color-pink-300);
+}
+
+.architectureInOlderASPDescription {
+  font-size: 0.75rem;
+  color: var(--color-slate-400);
+  margin-block-start: 0.25rem;
+}
+
+.architectureBuilderServicesAddValidationCodeText {
+  color: var(--color-pink-300);
+}
+
+.architectureWhyUseBothGrid {
+  display: grid;
+  grid-template-columns: repeat(1,minmax(0,1fr));
+  gap: 1.5rem;
+}
+
+.architectureWhyUseBothStack {
+  padding: 1.25rem;
+  border-radius: 0.75rem;
+  background-color: var(--color-slate-950);
+  border-width: 1px;
+  border-color: var(--color-slate-800);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.architectureWhyUseBothSectionHeading {
+  font-weight: 700;
+  font-size: 0.875rem;
+  margin-block-end: 0.5rem;
+  color: var(--color-white);
+}
+
+.architectureBuilderServicesAddValidationCodeText {
+  color: var(--color-pink-300);
+}
+
+.architectureRequiredCodeText {
+  color: var(--color-violet-300);
+}
+
+.architectureRequiredKeywordEnforcesList {
+  --space-y: 0.625rem;
+  font-size: 0.75rem;
+  color: var(--color-slate-300);
+}
+
+.architectureRequiredKeywordEnforcesList > :not([hidden]) ~ :not([hidden]) {
+  margin-block-start: var(--space-y);
+}
+
+.architectureRequiredKeywordEnforcesListItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+
+.architectureElement {
+  inline-size: 1rem;
+  block-size: 1rem;
+  color: var(--color-violet-400);
+  flex-shrink: 0;
+  margin-block-start: 0.125rem;
+}
+
+.architectureRequiredCodeTextVariant2 {
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+
+.architectureRequiredKeywordEnforcesListItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+
+.architectureElementVariant2 {
+  inline-size: 1rem;
+  block-size: 1rem;
+  color: var(--color-pink-400);
+  flex-shrink: 0;
+  margin-block-start: 0.125rem;
+}
+
+.architectureRequiredCodeTextVariant2 {
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+
+.architectureRequiredCodeTextVariant2 {
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+
+.architectureRequiredCodeTextVariant2 {
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+
+.architectureRequiredKeywordEnforcesListItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+
+.architectureElementSuccess {
+  inline-size: 1rem;
+  block-size: 1rem;
+  color: var(--color-emerald-400);
+  flex-shrink: 0;
+  margin-block-start: 0.125rem;
+}
+
+.architectureRequiredCodeTextVariant2 {
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+
+.architectureNewInNETContentPanel {
+  background-color: color-mix(in srgb, var(--color-slate-900) 90%, transparent);
+  border-width: 1px;
+  border-color: var(--color-slate-800);
+  border-radius: 1rem;
+  padding: 1.5rem;
+}
+
+.architectureNewInNETRow {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-block-end: 1rem;
+}
+
+.architectureStructuringMinimalAPIsSectionHeading {
+  font-size: 1.125rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--color-white);
+}
+
+.architectureElementVariant3 {
+  inline-size: 1.25rem;
+  block-size: 1.25rem;
+  color: var(--color-pink-400);
+}
+
+.architectureInOlderASPDescription {
+  font-size: 0.75rem;
+  color: var(--color-slate-400);
+  margin-block-start: 0.25rem;
+}
+
+.architectureProgramCsCodeText {
+  color: var(--color-slate-200);
+}
+
+.architectureRow {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.architectureButtonConditional {
+  padding-inline: 0.75rem;
+  padding-block: 0.375rem;
+  border-radius: 0.75rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  transition: all 180ms ease;
+  box-shadow: 0 10px 20px -8px rgb(0 0 0 / 0.4);
+  background-color: var(--color-pink-600);
+  color: var(--color-white);
+}
+
+.architectureButtonConditionalNeutral {
+  padding-inline: 0.75rem;
+  padding-block: 0.375rem;
+  border-radius: 0.75rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  transition: all 180ms ease;
+  background-color: var(--color-slate-950);
+  color: var(--color-slate-400);
+  border-width: 1px;
+  border-color: var(--color-slate-800);
+}
+
+.architectureGrid {
+  display: grid;
+  grid-template-columns: repeat(1,minmax(0,1fr));
+  gap: 1rem;
+}
+
+.architectureNewInNETContentPanel {
+  background-color: color-mix(in srgb, var(--color-slate-900) 90%, transparent);
+  border-width: 1px;
+  border-color: var(--color-slate-800);
+  border-radius: 1rem;
+  padding: 1.5rem;
+}
+
+.architectureStructuredLoggingILoggerRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-block-end: 1rem;
+}
+
+.architectureStructuringMinimalAPIsSectionHeading {
+  font-size: 1.125rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.architectureElementInfo {
+  inline-size: 1.25rem;
+  block-size: 1.25rem;
+  color: var(--color-cyan-400);
+}
+
+.architectureILoggerDishDtoCodeText {
+  color: var(--color-cyan-300);
+}
+
+.architectureStructuredTemplateBestRow {
+  display: flex;
+  background-color: var(--color-slate-950);
+  padding: 0.25rem;
+  border-radius: 0.75rem;
+  border-width: 1px;
+  border-color: var(--color-slate-800);
+}
+
+.architectureStructuredTemplateBestButtonConditional {
+  padding-inline: 0.75rem;
+  padding-block: 0.25rem;
+  border-radius: 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  background-color: var(--color-emerald-600);
+  color: var(--color-white);
+}
+
+.architectureStructuredTemplateBestButtonConditionalNeutral {
+  padding-inline: 0.75rem;
+  padding-block: 0.25rem;
+  border-radius: 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--color-slate-400);
+}
+
+.architectureStringInterpolationAntiButtonConditional {
+  padding-inline: 0.75rem;
+  padding-block: 0.25rem;
+  border-radius: 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  background-color: var(--color-rose-600);
+  color: var(--color-white);
+}
+
+.architectureStructuredTemplateBestButtonConditionalNeutral {
+  padding-inline: 0.75rem;
+  padding-block: 0.25rem;
+  border-radius: 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--color-slate-400);
+}
+
+.architectureInfoDishesAPIModelsGrid {
+  display: grid;
+  grid-template-columns: repeat(1,minmax(0,1fr));
+  gap: 1rem;
+  align-items: center;
+}
+
+.architectureInfoDishesAPIModelsContentPanel {
+  padding: 1rem;
+  border-radius: 0.75rem;
+  background-color: var(--color-slate-950);
+  border-width: 1px;
+  border-color: color-mix(in srgb, var(--color-emerald-500) 30%, transparent);
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 0.75rem;
+  --space-y: 0.25rem;
+}
+
+.architectureInfoDishesAPIModelsContentPanel > :not([hidden]) ~ :not([hidden]) {
+  margin-block-start: var(--space-y);
+}
+
+.architectureInfoDishesAPIModelsContainerLayout {
+  color: var(--color-emerald-400);
+  font-weight: 700;
+}
+
+.architectureProgramCsCodeText {
+  color: var(--color-slate-200);
+}
+
+.architectureParsedJSONPropertyContainerLayout {
+  color: var(--color-slate-400);
+  padding-block-start: 0.5rem;
+}
+
+.architectureILoggerDishDtoCodeText {
+  color: var(--color-cyan-300);
+}
+
+.architectureInfoDishesAPIModelsGrid {
+  display: grid;
+  grid-template-columns: repeat(1,minmax(0,1fr));
+  gap: 1rem;
+  align-items: center;
+}
+
+.architectureAvoidConsoleWriteLineContentPanel {
+  padding: 1rem;
+  border-radius: 0.75rem;
+  background-color: color-mix(in srgb, var(--color-rose-950) 30%, transparent);
+  border-width: 1px;
+  border-color: color-mix(in srgb, var(--color-rose-500) 30%, transparent);
+  font-size: 0.75rem;
+  color: var(--color-rose-200);
+}
+
+.architectureRequiredCodeTextVariant2 {
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+
+.architectureRequiredCodeTextVariant2 {
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+
+.architectureRequiredCodeTextVariant2 {
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+
+.architectureRequiredCodeTextVariant2 {
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+
+.securityInteractiveDotnetUserContainerLayout {
+  --space-y: 2rem;
+}
+
+.securityInteractiveDotnetUserContainerLayout > :not([hidden]) ~ :not([hidden]) {
+  margin-block-start: var(--space-y);
+}
+
+.securityInteractiveDotnetUserContentPanel {
+  background-color: color-mix(in srgb, var(--color-slate-900) 90%, transparent);
+  border-width: 1px;
+  border-color: var(--color-slate-800);
+  border-radius: 1rem;
+  padding: 1.5rem;
+}
+
+.securityInteractiveDotnetUserSectionHeading {
+  font-size: 1.125rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-block-end: 0.5rem;
+  color: var(--color-white);
+}
+
+.securityElement {
+  inline-size: 1.25rem;
+  block-size: 1.25rem;
+  color: var(--color-purple-400);
+}
+
+.securityDotnetUserJwtsCodeText {
+  color: var(--color-purple-300);
+}
+
+.securityConfigureTestJWTDescription {
+  font-size: 0.75rem;
+  color: var(--color-slate-400);
+  margin-block-end: 1.5rem;
+}
+
+.securityConfigureTestJWTGrid {
+  display: grid;
+  grid-template-columns: repeat(1,minmax(0,1fr));
+  gap: 1.5rem;
+}
+
+.securityConfigureTestJWTContainerLayout {
+  --space-y: 1rem;
+}
+
+.securityConfigureTestJWTContainerLayout > :not([hidden]) ~ :not([hidden]) {
+  margin-block-start: var(--space-y);
+}
+
+.securityConfigureTestJWTContentPanel {
+  padding: 1rem;
+  border-radius: 0.75rem;
+  background-color: var(--color-slate-950);
+  border-width: 1px;
+  border-color: var(--color-slate-800);
+  --space-y: 0.75rem;
+}
+
+.securityConfigureTestJWTContentPanel > :not([hidden]) ~ :not([hidden]) {
+  margin-block-start: var(--space-y);
+}
+
+.securityConfigureTestJWTRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.securityConfigureTestJWTInlineText {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-purple-300);
+  display: flex;
+  align-items: center;
+  gap: 0.375rem;
+}
+
+.securityElementVariant2 {
+  inline-size: 1rem;
+  block-size: 1rem;
+}
+
+.securityIncludeBearerTokenFieldLabel {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.75rem;
+  cursor: pointer;
+}
+
+.securityTextField {
+  accent-color: var(--color-purple-500);
+}
+
+.securityIncludeBearerTokenInlineText {
+  color: var(--color-slate-200);
+}
+
+.securityAudienceMenuApiGrid {
+  display: grid;
+  grid-template-columns: repeat(1,minmax(0,1fr));
+  gap: 0.75rem;
+  padding-block-start: 0.5rem;
+}
+
+.securityAudienceFieldLabel {
+  display: block;
+  font-size: 11px;
+  color: var(--color-slate-400);
+  margin-block-end: 0.25rem;
+}
+
+.securityJWTAudienceClaimSelect {
+  inline-size: 100%;
+  background-color: var(--color-slate-900);
+  border-width: 1px;
+  border-color: var(--color-slate-700);
+  border-radius: 0.5rem;
+  padding-inline: 0.625rem;
+  padding-block: 0.375rem;
+  font-size: 0.75rem;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  color: var(--color-white);
+}
+
+.securityAudienceFieldLabel {
+  display: block;
+  font-size: 11px;
+  color: var(--color-slate-400);
+  margin-block-end: 0.25rem;
+}
+
+.securityJWTAudienceClaimSelect {
+  inline-size: 100%;
+  background-color: var(--color-slate-900);
+  border-width: 1px;
+  border-color: var(--color-slate-700);
+  border-radius: 0.5rem;
+  padding-inline: 0.625rem;
+  padding-block: 0.375rem;
+  font-size: 0.75rem;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+
+.securityAudienceFieldLabel {
+  display: block;
+  font-size: 11px;
+  color: var(--color-slate-400);
+  margin-block-end: 0.25rem;
+}
+
+.securityJWTAudienceClaimSelect {
+  inline-size: 100%;
+  background-color: var(--color-slate-900);
+  border-width: 1px;
+  border-color: var(--color-slate-700);
+  border-radius: 0.5rem;
+  padding-inline: 0.625rem;
+  padding-block: 0.375rem;
+  font-size: 0.75rem;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+
+.securityDotnetUserJwtsContentPanel {
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  background-color: var(--color-slate-900);
+  border-width: 1px;
+  border-color: var(--color-slate-800);
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 0.75rem;
+  color: var(--color-purple-300);
+}
+
+.securityDecodedJWTPayloadContentPanel {
+  padding: 1rem;
+  border-radius: 0.75rem;
+  background-color: var(--color-slate-950);
+  border-width: 1px;
+  border-color: var(--color-slate-800);
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 0.75rem;
+}
+
+.securityDecodedJWTPayloadRow {
+  color: var(--color-slate-400);
+  margin-block-end: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.securityHS256BearerInlineText {
+  color: var(--color-purple-400);
+}
+
+.securityCodeText {
+  color: var(--color-emerald-300);
+  overflow-x: auto;
+}
+
+.securitySelectEndpointCallStack {
+  --space-y: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.securitySelectEndpointCallStack > :not([hidden]) ~ :not([hidden]) {
+  margin-block-start: var(--space-y);
+}
+
+.securitySelectEndpointCallContainerLayout {
+  --space-y: 1rem;
+}
+
+.securitySelectEndpointCallContainerLayout > :not([hidden]) ~ :not([hidden]) {
+  margin-block-start: var(--space-y);
+}
+
+.securitySelectEndpointCallContentPanel {
+  padding: 1rem;
+  border-radius: 0.75rem;
+  background-color: var(--color-slate-950);
+  border-width: 1px;
+  border-color: var(--color-slate-800);
+}
+
+.securitySelectEndpointCallContainerLayoutNeutral {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-slate-400);
+  margin-block-end: 0.75rem;
+}
+
+.securityGrid {
+  display: grid;
+  grid-template-columns: repeat(1,minmax(0,1fr));
+  gap: 0.5rem;
+}
+
+.securityButtonConditional {
+  padding: 0.75rem;
+  border-radius: 0.75rem;
+  border-width: 1px;
+  text-align: start;
+  transition: all 180ms ease;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: color-mix(in srgb, var(--color-purple-500) 20%, transparent);
+  border-color: var(--color-purple-400);
+  color: var(--color-white);
+}
+
+.securityButtonConditionalNeutral {
+  padding: 0.75rem;
+  border-radius: 0.75rem;
+  border-width: 1px;
+  text-align: start;
+  transition: all 180ms ease;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--color-slate-900);
+  border-color: var(--color-slate-800);
+  color: var(--color-slate-400);
+}
+
+.securityInlineText {
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.securityInlineTextAccent {
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 11px;
+  color: var(--color-purple-300);
+}
+
+.securityContentPanelConditional {
+  padding: 1.25rem;
+  border-radius: 0.75rem;
+  border-width: 1px;
+  background-color: color-mix(in srgb, var(--color-emerald-950) 40%, transparent);
+  border-color: color-mix(in srgb, var(--color-emerald-500) 40%, transparent);
+  color: var(--color-emerald-200);
+}
+
+.securityContentPanelConditionalWarning {
+  padding: 1.25rem;
+  border-radius: 0.75rem;
+  border-width: 1px;
+  background-color: color-mix(in srgb, var(--color-amber-950) 40%, transparent);
+  border-color: color-mix(in srgb, var(--color-amber-500) 40%, transparent);
+  color: var(--color-amber-200);
+}
+
+.securityContentPanelConditionalDanger {
+  padding: 1.25rem;
+  border-radius: 0.75rem;
+  border-width: 1px;
+  background-color: color-mix(in srgb, var(--color-rose-950) 40%, transparent);
+  border-color: color-mix(in srgb, var(--color-rose-500) 40%, transparent);
+  color: var(--color-rose-200);
+}
+
+.securityRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-block-end: 0.5rem;
+}
+
+.securityInlineTextVariant2 {
+  font-size: 1rem;
+  font-weight: 700;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.securityElementSuccess {
+  inline-size: 1.25rem;
+  block-size: 1.25rem;
+  color: var(--color-emerald-400);
+}
+
+.securityElementDanger {
+  inline-size: 1.25rem;
+  block-size: 1.25rem;
+  color: var(--color-rose-400);
+}
+
+.securityDescription {
+  font-size: 0.75rem;
+  line-height: 1.625;
+}
+
+@keyframes pulse { 50% { opacity: .5; } }
+
+.foundationsMinimalAPIButtonConditionalNeutral:hover {
+  color: var(--color-white);
+}
+
+.responsesNotFoundCodeText {
+  color: var(--color-white);
+}
+
+.crudNameCodeText {
+  color: var(--color-white);
+}

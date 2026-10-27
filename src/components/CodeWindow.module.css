@@ -1,0 +1,158 @@
+.window {
+  min-inline-size: 0;
+  contain: layout paint;
+}
+
+.codeBody {
+  max-inline-size: 100%;
+  overflow: auto;
+  overscroll-behavior-inline: contain;
+}
+
+.copyError {
+  margin-block-start: 0.5rem;
+  color: var(--color-rose-200);
+  font-size: 0.75rem;
+}
+
+.codeWindowContentPanel {
+  background-color: var(--color-slate-950);
+  border-width: 1px;
+  border-color: color-mix(in srgb, var(--color-slate-700) 80%, transparent);
+  margin-block: 0.75rem;
+  overflow: hidden;
+  border-radius: 0.75rem;
+  box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.5);
+}
+
+.codeWindowRow {
+  background-color: var(--color-slate-900);
+  border-block-end-width: 1px;
+  border-color: var(--color-slate-800);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-inline: 1rem;
+  padding-block: 0.625rem;
+}
+
+.codeWindowRowVariant2 {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.codeWindowIcon {
+  background-color: color-mix(in srgb, var(--color-rose-500) 80%, transparent);
+  block-size: 0.75rem;
+  display: inline-block;
+  border-radius: 9999px;
+  inline-size: 0.75rem;
+}
+
+.codeWindowIconWarning {
+  background-color: color-mix(in srgb, var(--color-amber-500) 80%, transparent);
+  block-size: 0.75rem;
+  display: inline-block;
+  border-radius: 9999px;
+  inline-size: 0.75rem;
+}
+
+.codeWindowIconSuccess {
+  background-color: color-mix(in srgb, var(--color-emerald-500) 80%, transparent);
+  block-size: 0.75rem;
+  display: inline-block;
+  border-radius: 9999px;
+  inline-size: 0.75rem;
+}
+
+.codeWindowInlineText {
+  font-weight: 500;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  margin-inline-start: 0.5rem;
+  color: var(--color-slate-300);
+  font-size: 0.75rem;
+}
+
+.codeWindowBadge {
+  background-color: color-mix(in srgb, var(--color-violet-500) 15%, transparent);
+  border-width: 1px;
+  border-color: color-mix(in srgb, var(--color-violet-500) 30%, transparent);
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  padding-inline: 0.5rem;
+  padding-block: 0.125rem;
+  border-radius: 0.375rem;
+  font-size: 11px;
+  color: var(--color-violet-300);
+}
+
+.codeWindowCopyCodeButton {
+  background-color: var(--color-slate-800);
+  padding: 0.375rem;
+  border-radius: 0.5rem;
+  color: var(--color-slate-300);
+  transition: all 180ms ease;
+}
+
+.codeWindowCopyCodeButton:hover {
+  background-color: var(--color-slate-700);
+}
+
+.codeWindowElement {
+  color: var(--color-emerald-400);
+  block-size: 0.875rem;
+  inline-size: 0.875rem;
+}
+
+.codeWindowElementVariant2 {
+  block-size: 0.875rem;
+  inline-size: 0.875rem;
+}
+
+.codeWindowContainerLayout {
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  line-height: 1.625;
+  overflow-x: auto;
+  padding: 1rem;
+  font-size: 0.75rem;
+}
+
+@media (min-width: 640px) {
+
+  .codeWindowContainerLayout {
+    font-size: 0.875rem;
+  }
+}
+
+.codeWindowRowConditional {
+  background-color: color-mix(in srgb, var(--color-violet-500) 20%, transparent);
+  border-inline-start-width: 2px;
+  border-color: var(--color-violet-400);
+  display: flex;
+  align-items: flex-start;
+  padding-inline: 0.5rem;
+  padding-block: 0.125rem;
+  border-radius: 0.375rem;
+}
+
+.codeWindowRowConditionalVariant2 {
+  display: flex;
+  align-items: flex-start;
+  padding-inline: 0.5rem;
+  padding-block: 0.125rem;
+  border-radius: 0.375rem;
+}
+
+.codeWindowIconNeutral {
+  padding-inline-end: 0.75rem;
+  user-select: none;
+  text-align: end;
+  color: var(--color-slate-600);
+  inline-size: 1.75rem;
+  flex-shrink: 0;
+}
+
+.codeWindowInlineTextNeutral {
+  color: var(--color-slate-200);
+  white-space: pre;
+}
