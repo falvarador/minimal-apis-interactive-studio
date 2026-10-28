@@ -24,3 +24,25 @@ validate credentials. The CRUD simulator intentionally preserves its
 reference validation behavior: POST trims names and rejects fewer than two
 characters but does not enforce the example's 200-character limit; PUT
 accepts an empty name and preserves the entered value.
+
+## Deploy to GitHub Pages
+
+The production site is published at
+https://falvarador.github.io/minimal-apis-interactive-studio/. In the
+repository's **Settings → Pages → Build and deployment**, set **Source** to
+**GitHub Actions** once. The workflow builds the site with Node.js 22 and
+deploys the `dist` artifact after pushes to `main`; manual runs are also
+restricted to `main`.
+
+This checkout's working branch is `feature/gh`. To publish these changes,
+commit and push the feature branch, then merge it into `main` through a pull
+request. The Pages workflow starts after the merge:
+
+```sh
+git add vite.config.ts .github/workflows/deploy.yml README.md openspec/changes/deploy-preact-to-github-pages
+git commit -m "Deploy app to GitHub Pages"
+git push -u origin HEAD
+```
+
+Open a pull request from the pushed branch into `main`; merging it starts the
+production deployment.
